@@ -1,7 +1,7 @@
 import { Box, Typography, AppBar, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Projects = () => {
+const Hardware = () => {
   return (
     <Box>
       <AppBar class="appbar">
@@ -56,23 +56,7 @@ const Projects = () => {
       <Box class="routes-layout-box">
         <Box class="content-alignment">
           <Box class="page-content">
-            <Button
-              class="content-link"
-              component={Link}
-              to="/hardware"
-              disableRipple
-            >
-              Hardware
-            </Button>
-            <br />
-            <Button
-              class="content-link"
-              component={Link}
-              to="/software"
-              disableRipple
-            >
-              Software
-            </Button>
+            <Typography>hardware</Typography>
           </Box>
         </Box>
       </Box>
@@ -80,4 +64,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Hardware;

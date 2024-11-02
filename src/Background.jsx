@@ -39,7 +39,7 @@ const Background = () => {
 
     const particleMaterial = new THREE.PointsMaterial({
       color: 0x3e4346,
-      size: 0.001,
+      size: 0.0015,
     });
 
     const particleSystem = new THREE.Points(particles, particleMaterial);
@@ -57,6 +57,14 @@ const Background = () => {
       for (let i = 0; i < particleCount; i++) {
         positions[i * 3 + 1] += Math.sin(elapsedTime + positions[i * 3]) * 0.01;
         positions[i * 3] += Math.cos(elapsedTime + positions[i * 3 + 1]) * 0.01;
+
+        // Confine particles within the screen bounds
+        if (positions[i * 3] < -5 || positions[i * 3] > 5) {
+          positions[i * 3] = (Math.random() - 0.5) * 10;
+        }
+        if (positions[i * 3 + 1] < -5 || positions[i * 3 + 1] > 5) {
+          positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+        }
       }
       particles.attributes.position.needsUpdate = true;
 

@@ -1,7 +1,8 @@
 import { Box, Typography, AppBar, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { FiExternalLink } from "react-icons/fi";
 
-const Projects = () => {
+const Contact = () => {
   return (
     <Box>
       <AppBar class="appbar">
@@ -25,6 +26,19 @@ const Projects = () => {
           Home
         </Button>
         <Button
+          component={Link}
+          to="/projects"
+          color="inherit"
+          disableRipple
+          sx={{
+            textTransform: "capitalize",
+            justifyContent: "flex-start",
+            width: "100%",
+          }}
+        >
+          Projects
+        </Button>
+        <Button
           color="inherit"
           disableRipple
           sx={{
@@ -35,19 +49,6 @@ const Projects = () => {
         >
           —
         </Button>
-        <Button
-          component={Link}
-          to="/contact"
-          color="inherit"
-          disableRipple
-          sx={{
-            textTransform: "capitalize",
-            justifyContent: "flex-start",
-            width: "100%",
-          }}
-        >
-          Contact
-        </Button>
         <Typography class="credit">
           Website created and designed by Purit Hongjirakul
         </Typography>
@@ -55,29 +56,32 @@ const Projects = () => {
 
       <Box class="routes-layout-box">
         <Box class="content-alignment">
-          <Box class="page-content">
-            <Button
-              class="content-link"
-              component={Link}
-              to="/hardware"
-              disableRipple
-            >
-              Hardware
-            </Button>
-            <br />
-            <Button
-              class="content-link"
-              component={Link}
-              to="/software"
-              disableRipple
-            >
-              Software
-            </Button>
-          </Box>
+          <Typography class="page-content">
+            Location: Taipei City, Taiwan <br /> Email: kyriosaaph@gmail.com
+          </Typography>
+          <Button
+            class="content-link"
+            href="https://www.linkedin.com/in/kyriosaa"
+            disableRipple
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Improve security
+          >
+            Linkedin <FiExternalLink />
+          </Button>
+          <br />
+          <Button
+            class="content-link"
+            href="https://github.com/kyriosaa"
+            disableRipple
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Improve security
+          >
+            GitHub <FiExternalLink />
+          </Button>
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default Projects;
+export default Contact;

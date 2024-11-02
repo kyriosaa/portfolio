@@ -1,9 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
 import Background from "./Background";
-import Projects from "./pages/projects";
 import "./App.css";
 import { Box } from "@mui/material";
+import Home from "./pages/home";
+import Projects from "./pages/projects";
+import Hardware from "./pages/hardware";
+import Software from "./pages/software";
+import Contact from "./pages/contact";
+import Wipeout from "./projects/wipeout";
+import Snackstore from "./projects/snackstore";
 
 function App() {
   return (
@@ -11,8 +16,16 @@ function App() {
       <Router>
         <Background />
         <Routes>
+          {/* Main Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/hardware" element={<Hardware />} />
+          <Route path="/software" element={<Software />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Project Routes */}
+          <Route path="/wipeout" element={<Wipeout />} />
+          <Route path="/snackstore" element={<Snackstore />} />
         </Routes>
       </Router>
     </Box>

@@ -1,7 +1,22 @@
-import { Box, Typography, AppBar, Button } from "@mui/material";
+import { useState, useEffect } from "react";
+import { Box, Typography, AppBar, Button, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
+import { MdArrowBack } from "react-icons/md";
+import SoftwareProjectsList from "../components/SoftwareProjectsList";
 
-const Projects = () => {
+const Software = () => {
+  const [animate, setAnimate] = useState(false);
+  const [fadeInProjects, setFadeInProjects] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+    const timer = setTimeout(() => {
+      setFadeInProjects(true);
+    }, 1000); // Delay to match the duration of the slide-to-top animation
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Box>
       <AppBar class="appbar">
@@ -55,24 +70,24 @@ const Projects = () => {
 
       <Box class="routes-layout-box">
         <Box class="content-alignment">
-          <Box class="page-content">
-            <Button
+          <Box class={`page-content ${animate ? "slide-to-top" : ""}`}>
+            <IconButton
               class="content-link"
-              component={Link}
-              to="/hardware"
               disableRipple
+              component={Link}
+              to="/projects"
             >
-              Hardware
-            </Button>
+              <MdArrowBack />
+            </IconButton>
+            <Typography class="page-content">Software</Typography>
             <br />
-            <Button
-              class="content-link"
-              component={Link}
-              to="/software"
-              disableRipple
+            <Box
+              class={`scrollable-container ${
+                fadeInProjects ? "fade-in fade-in-visible" : ""
+              }`}
             >
-              Software
-            </Button>
+              <SoftwareProjectsList />
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -80,4 +95,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Software;

@@ -1,5 +1,35 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
+@keyframes slideToTop {
+  from {
+    transform: translateY(50);
+  }
+  to {
+    transform: translateY(-110%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-to-top {
+  animation: slideToTop 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-visible {
+  opacity: 1; /* Make visible with fade-in animation */
+}
+
 body {
   font-family: "Pretendard", sans-serif;
 }
@@ -27,13 +57,15 @@ body {
   height: auto;
   background-color: transparent;
   box-shadow: none;
+  flex-direction: column;
+  align-items: flex-start;
   left: 4%;
   top: 6%;
 }
 
-.toolbar {
-  flex-direction: column;
-  align-items: flex-start;
+.credit {
+  padding-top: 155%;
+  font-size: x-small;
 }
 
 .name {
@@ -50,12 +82,67 @@ body {
   padding-bottom: 8%;
 }
 
-.home-bio {
-  width: 20%;
-}
-
 .page-content {
   font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: normal;
+}
+
+.page-bold {
+  font-size: large;
+  font-family: "Pretendard", sans-serif;
+  font-weight: bold;
+}
+
+.page-light {
+  font-size: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: lighter;
+}
+
+.page-subscript {
+  color: #c9c1c1;
+  font-size: x-small;
+  font-family: "Pretendard", sans-serif;
+  font-weight: lighter;
+}
+
+.content-alignment {
+  width: 20%;
+}
+
+.content-link {
+  font-size: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: normal;
+  color: #dedede;
+  text-transform: capitalize;
+  justify-content: flex-end;
+}
+
+.scrollable-container {
+  max-height: 90%;
+  overflow: auto;
+  opacity: 0; /* Initially invisible */
+}
+
+.project-info {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-link {
+  font-size: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: lighter;
+  color: #dedede;
+  justify-content: flex-end;
+}
+
+.project-link-area {
+  padding-top: 20%;
+}
+
+.project-back-button {
+  padding-top: 10%;
 }
