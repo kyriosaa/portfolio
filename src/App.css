@@ -1,0 +1,61 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+body {
+  font-family: "Pretendard", sans-serif;
+}
+
+.app-layout-box {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Needs work depending on the page content */
+.routes-layout-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  margin-right: 10%;
+}
+
+.appbar {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  background-color: transparent;
+  box-shadow: none;
+  left: 4%;
+  top: 6%;
+}
+
+.toolbar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: xxx-large;
+  font-family: "Pretendard", sans-serif;
+  font-weight: lighter;
+}
+
+.title {
+  font-size: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: lighter;
+  padding-left: 0.2cap;
+  padding-bottom: 8%;
+}
+
+.home-bio {
+  width: 20%;
+}
+
+.page-content {
+  font-size: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: normal;
+}
