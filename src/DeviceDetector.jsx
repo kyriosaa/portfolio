@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
+import Background from "./Background";
 
 const DeviceDetector = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,7 +18,8 @@ const DeviceDetector = ({ children }) => {
 
   if (isMobile) {
     return (
-      <Box className="mobile-restriction">
+      <Box>
+        <Background />
         <Typography variant="h6">
           This website is only available on PC. Please visit from a desktop or
           laptop computer.
