@@ -14,9 +14,9 @@ import Sevenbinary from "./projects/hardware/7binary";
 
 function App() {
   return (
-    <DeviceDetector>
-      <Box className="app-layout-box">
-        <Router>
+    <Box className="app-layout-box">
+      <Router>
+        <DeviceDetector>
           <Background />
           <Routes>
             {/* Main Routes */}
@@ -34,9 +34,9 @@ function App() {
             {/* Hardware Project Routes */}
             <Route path="/7binary" element={<Sevenbinary />} />
           </Routes>
-        </Router>
-      </Box>
-    </DeviceDetector>
+        </DeviceDetector>
+      </Router>
+    </Box>
   );
 }
 
