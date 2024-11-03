@@ -18,7 +18,17 @@ const DeviceDetector = ({ children }) => {
 
   if (isMobile) {
     return (
-      <Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+        textAlign="center"
+        bgcolor="black"
+        color="white"
+        padding={2}
+      >
         <Background />
         <Typography variant="h6">
           This website is only available on PC. Please visit from a desktop or
