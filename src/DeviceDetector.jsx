@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import Background from "./Background";
+import BackgroundMobile from "./BackgroundMobile";
 import "./App.css";
 
 const DeviceDetector = ({ children }) => {
@@ -19,15 +19,7 @@ const DeviceDetector = ({ children }) => {
 
   if (isMobile) {
     console.log("Mobile device detected"); // Debugging information
-    return (
-      <div>
-        <Background />
-        <p className="mobile-detector">
-          This website is only available on PC. Please visit from a desktop or
-          laptop computer.
-        </p>
-      </div>
-    );
+    return <BackgroundMobile />;
   }
 
   return children;
