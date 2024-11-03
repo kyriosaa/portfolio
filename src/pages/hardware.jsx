@@ -1,5 +1,8 @@
-import { Box, Typography, AppBar, Button } from "@mui/material";
+import { Box, Typography, AppBar, Button, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
+import { MdArrowBack } from "react-icons/md";
+import { motion } from "framer-motion";
+import HardwareProjectsList from "../components/HardwareProjectsList";
 
 const Hardware = () => {
   return (
@@ -54,11 +57,28 @@ const Hardware = () => {
       </AppBar>
 
       <Box class="routes-layout-box">
-        <Box class="content-alignment">
+        <motion.div
+          class="content-alignment"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <Box class="page-content">
-            <Typography>hardware</Typography>
+            <IconButton
+              class="content-link"
+              disableRipple
+              component={Link}
+              to="/projects"
+            >
+              <MdArrowBack />
+            </IconButton>
+            <Box class="page-content">Hardware</Box>
+            <br />
+
+            <HardwareProjectsList />
           </Box>
-        </Box>
+        </motion.div>
       </Box>
     </Box>
   );

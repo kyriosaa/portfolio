@@ -1,22 +1,10 @@
-import { useState, useEffect } from "react";
 import { Box, Typography, AppBar, Button, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { MdArrowBack } from "react-icons/md";
+import { motion } from "framer-motion";
 import SoftwareProjectsList from "../components/SoftwareProjectsList";
 
 const Software = () => {
-  const [animate, setAnimate] = useState(false);
-  const [fadeInProjects, setFadeInProjects] = useState(false);
-
-  useEffect(() => {
-    setAnimate(true);
-    const timer = setTimeout(() => {
-      setFadeInProjects(true);
-    }, 1000); // Delay to match the duration of the slide-to-top animation
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Box>
       <AppBar class="appbar">
@@ -69,8 +57,14 @@ const Software = () => {
       </AppBar>
 
       <Box class="routes-layout-box">
-        <Box class="content-alignment">
-          <Box class={`page-content ${animate ? "slide-to-top" : ""}`}>
+        <motion.div
+          class="content-alignment"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <Box class="page-content">
             <IconButton
               class="content-link"
               disableRipple
@@ -79,17 +73,12 @@ const Software = () => {
             >
               <MdArrowBack />
             </IconButton>
-            <Typography class="page-content">Software</Typography>
+            <Box class="page-content">Software</Box>
             <br />
-            <Box
-              class={`scrollable-container ${
-                fadeInProjects ? "fade-in fade-in-visible" : ""
-              }`}
-            >
-              <SoftwareProjectsList />
-            </Box>
+
+            <SoftwareProjectsList />
           </Box>
-        </Box>
+        </motion.div>
       </Box>
     </Box>
   );

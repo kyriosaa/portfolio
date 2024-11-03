@@ -1,5 +1,6 @@
 import { Box, Typography, AppBar, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -54,7 +55,13 @@ const Home = () => {
       </AppBar>
 
       <Box class="routes-layout-box">
-        <Box class="content-alignment">
+        <motion.div
+          class="content-alignment"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <Typography class="page-content">
             Born in 2002 in Bangkok, Thailand. I have a passion in programming
             and engineering, which has led me to pursuing my degree in
@@ -70,7 +77,7 @@ const Home = () => {
             I am currently expanding my portfolio in hardware, learning C++ and
             programming microcontrollers.
           </Typography>
-        </Box>
+        </motion.div>
       </Box>
     </Box>
   );

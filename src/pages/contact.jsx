@@ -1,6 +1,7 @@
 import { Box, Typography, AppBar, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -55,7 +56,13 @@ const Contact = () => {
       </AppBar>
 
       <Box class="routes-layout-box">
-        <Box class="content-alignment">
+        <motion.div
+          class="content-alignment"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <Typography class="page-content">
             Location: Taipei City, Taiwan <br /> Email: kyriosaaph@gmail.com
           </Typography>
@@ -78,7 +85,7 @@ const Contact = () => {
           >
             GitHub <FiExternalLink />
           </Button>
-        </Box>
+        </motion.div>
       </Box>
     </Box>
   );

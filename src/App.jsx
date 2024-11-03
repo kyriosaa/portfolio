@@ -7,8 +7,10 @@ import Projects from "./pages/projects";
 import Hardware from "./pages/hardware";
 import Software from "./pages/software";
 import Contact from "./pages/contact";
-import Wipeout from "./projects/wipeout";
-import Snackstore from "./projects/snackstore";
+import Wipeout from "./projects/software/wipeout";
+import Snackstore from "./projects/software/snackstore";
+import ItdlBiography from "./projects/software/itdlbiography";
+import Sevenbinary from "./projects/hardware/7binary";
 
 function App() {
   return (
@@ -23,9 +25,13 @@ function App() {
           <Route path="/software" element={<Software />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Project Routes */}
+          {/* Software Project Routes */}
           <Route path="/wipeout" element={<Wipeout />} />
           <Route path="/snackstore" element={<Snackstore />} />
+          <Route path="/itdlbiography" element={<ItdlBiography />} />
+
+          {/* Hardware Project Routes */}
+          <Route path="/7binary" element={<Sevenbinary />} />
         </Routes>
       </Router>
     </Box>

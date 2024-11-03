@@ -1,7 +1,7 @@
-import ProjectInfo from "../components/ProjectInfo";
+import SoftwareProjectInfo from "../../components/SoftwareProjectInfo";
 
 const data = {
-  imgsrc: "wipeout.jpg",
+  imgsrc: "softwareproj/wipeout.jpg",
   title: "Wipeout",
   date: "Sep 2024 - Oct 2024",
   description:
@@ -11,7 +11,7 @@ const data = {
 };
 
 const Wipeout = () => {
-  return <ProjectInfo data={data} />;
+  return <SoftwareProjectInfo data={data} />;
 };
 
 export default Wipeout;

@@ -120,10 +120,8 @@ body {
   justify-content: flex-end;
 }
 
-.scrollable-container {
-  max-height: 90%;
-  overflow: auto;
-  opacity: 0; /* Initially invisible */
+.project-alignment {
+  width: 30%;
 }
 
 .project-info {
@@ -140,9 +138,9 @@ body {
 }
 
 .project-link-area {
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .project-back-button {
-  padding-top: 10%;
+  padding-top: 5%;
 }
