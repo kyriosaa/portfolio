@@ -15,6 +15,7 @@ const HardwareProjectsList = () => {
           key={index}
           component={Link}
           to={project.link}
+          disableRipple
           class="content-link"
           sx={{
             textTransform: "capitalize",
