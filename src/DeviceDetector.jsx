@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Background from "./Background";
+import { Box, Typography } from "@mui/material";
+import "./App.css";
 
 const DeviceDetector = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,7 +20,15 @@ const DeviceDetector = ({ children }) => {
 
   if (isMobile) {
     console.log("Mobile device detected"); // Debugging information
-    return <Background />;
+    return (
+      <Box>
+        <Background />
+        <Typography class="mobile-detector">
+          This website is only available on PC. Please visit from a desktop or
+          laptop computer.
+        </Typography>
+      </Box>
+    );
   }
 
   return children;

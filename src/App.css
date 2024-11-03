@@ -34,6 +34,15 @@ body {
   font-family: "Pretendard", sans-serif;
 }
 
+.mobile-detector {
+  font-size: large;
+  font-family: "Pretendard", sans-serif;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .app-layout-box {
   height: 100vh;
   width: 100vw;
