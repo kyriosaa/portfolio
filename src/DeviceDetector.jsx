@@ -21,13 +21,12 @@ const DeviceDetector = ({ children }) => {
   if (isMobile) {
     console.log("Mobile device detected"); // Debugging information
     return (
-      <Box>
-        <Background />
+      <Background>
         <Typography class="mobile-detector">
           This website is only available on PC. Please visit from a desktop or
           laptop computer.
         </Typography>
-      </Box>
+      </Background>
     );
   }
 
