@@ -1,23 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
-@keyframes slideToTop {
-  from {
-    transform: translateY(50);
-  }
-  to {
-    transform: translateY(-110%);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .slide-to-top {
   animation: slideToTop 1s forwards;
 }
