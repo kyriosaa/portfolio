@@ -1,16 +1,16 @@
 import { Box } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Background from "./Background";
-import Home from "./Home";
-import Projects from "./Projects";
-import Hardware from "./Hardware";
-import Software from "./Software";
-import Contact from "./Contact";
-import Wipeout from "./Wipeout";
-import Snackstore from "./Snackstore";
-import ItdlBiography from "./ItdlBiography";
-import Sevenbinary from "./Sevenbinary";
 import DeviceDetector from "./DeviceDetector";
+import Background from "./Background";
+import Home from "./pages/home";
+import Projects from "./pages/projects";
+import Hardware from "./pages/hardware";
+import Software from "./pages/software";
+import Contact from "./pages/contact";
+import Wipeout from "./projects/software/wipeout";
+import Snackstore from "./projects/software/snackstore";
+import ItdlBiography from "./projects/software/itdlbiography";
+import Sevenbinary from "./projects/hardware/7binary";
 
 function App() {
   return (
