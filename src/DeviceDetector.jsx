@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import BackgroundMobile from "./BackgroundMobile";
-import "./App.css";
 
 const DeviceDetector = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -19,7 +17,12 @@ const DeviceDetector = ({ children }) => {
 
   if (isMobile) {
     console.log("Mobile device detected"); // Debugging information
-    return <BackgroundMobile />;
+    return (
+      <p>
+        This website is only available on PC. Please visit from a desktop or
+        laptop computer.
+      </p>
+    );
   }
 
   return children;
