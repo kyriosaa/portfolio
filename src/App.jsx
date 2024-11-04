@@ -10,8 +10,23 @@ import Wipeout from "./projects/software/wipeout";
 import Snackstore from "./projects/software/snackstore";
 import ItdlBiography from "./projects/software/itdlbiography";
 import Sevenbinary from "./projects/hardware/7binary";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const handleWheel = (event) => {
+      if (event.ctrlKey) {
+        event.preventDefault();
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
     <Box
       sx={{
