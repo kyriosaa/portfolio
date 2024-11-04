@@ -49,9 +49,6 @@ const Projects = () => {
         >
           Contact
         </Button>
-        <Typography class="credit">
-          Website created and designed by Purit Hongjirakul
-        </Typography>
       </AppBar>
 
       <Box class="routes-layout-box">

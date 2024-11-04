@@ -52,9 +52,6 @@ const HardwareProjectInfo = ({ data }) => {
         >
           Contact
         </Button>
-        <Typography class="credit">
-          Website created and designed by Purit Hongjirakul
-        </Typography>
       </AppBar>
 
       <Box class="routes-layout-box">
@@ -67,7 +64,7 @@ const HardwareProjectInfo = ({ data }) => {
           >
             <Box class="project-info">
               {/* Image */}
-              <img src={data.imgsrc} alt="Project image" height={450} />
+              <img src={data.imgsrc} alt="Project image" height={315} />
             </Box>
             <Box>
               {/* Title */}
