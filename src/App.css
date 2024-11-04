@@ -1,28 +1,10 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
-.slide-to-top {
-  animation: slideToTop 1s forwards;
-}
-
-.fade-in {
-  animation: fadeIn 1s forwards;
-}
-
-.fade-in-visible {
-  opacity: 1; /* Make visible with fade-in animation */
-}
-
 body {
-  font-family: "Pretendard", sans-serif;
-}
-
-.mobile-detector {
-  font-size: large;
+  color: #dedede;
+  font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .app-layout-box {
@@ -60,12 +42,14 @@ body {
 }
 
 .name {
+  color: #dedede;
   font-size: xxx-large;
   font-family: "Pretendard", sans-serif;
   font-weight: lighter;
 }
 
 .title {
+  color: #dedede;
   font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: lighter;
@@ -74,18 +58,21 @@ body {
 }
 
 .page-content {
+  color: #dedede;
   font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: normal;
 }
 
 .page-bold {
+  color: #dedede;
   font-size: large;
   font-family: "Pretendard", sans-serif;
   font-weight: bold;
 }
 
 .page-light {
+  color: #dedede;
   font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: lighter;
@@ -103,10 +90,10 @@ body {
 }
 
 .content-link {
+  color: #dedede;
   font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: normal;
-  color: #dedede;
   text-transform: capitalize;
   justify-content: flex-end;
 }
@@ -121,10 +108,10 @@ body {
 }
 
 .project-link {
+  color: #dedede;
   font-size: normal;
   font-family: "Pretendard", sans-serif;
   font-weight: lighter;
-  color: #dedede;
   justify-content: flex-end;
 }
 
