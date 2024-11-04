@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
+import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass";
 
 const Background = () => {
   const mountRef = useRef(null);
@@ -15,10 +18,11 @@ const Background = () => {
       0.1,
       1000
     );
-    camera.position.z = 10; // Set initial camera position
+    camera.position.z = 2; // Set initial camera position
 
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true }); // Enable antialiasing
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio); // Optimize for high-DPI displays
     renderer.domElement.style.position = "fixed";
     renderer.domElement.style.top = 0;
     renderer.domElement.style.left = 0;
@@ -30,75 +34,96 @@ const Background = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      composer.setSize(window.innerWidth, window.innerHeight);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Create a particle system
-    const particles = new THREE.BufferGeometry();
-    const particleCount = 20000; // Number of particles
-    const positions = new Float32Array(particleCount * 3);
-
-    for (let i = 0; i < particleCount; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
-    }
-
-    particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-
-    const particleMaterial = new THREE.PointsMaterial({
-      color: 0x3e4346,
-      size: 0.002,
+    // Create a plane geometry
+    const planeGeometry = new THREE.PlaneGeometry(20, 20, 100, 100);
+    const planeMaterial = new THREE.MeshBasicMaterial({
+      color: 0x777777,
+      wireframe: true,
     });
+    const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    scene.add(plane);
 
-    const particleSystem = new THREE.Points(particles, particleMaterial);
-    scene.add(particleSystem);
+    // Create a wavy line pattern on the plane
+    const createWavyPattern = () => {
+      const vertices = planeGeometry.attributes.position.array;
+      for (let i = 0; i < vertices.length; i += 3) {
+        const x = vertices[i];
+        const y = vertices[i + 1];
+        vertices[i + 2] = Math.sin(x * 2 + y * 2) * 0.5;
+      }
+      planeGeometry.attributes.position.needsUpdate = true;
+    };
 
-    const clock = new THREE.Clock();
+    createWavyPattern();
+
+    // Track mouse movement
+    const onMouseMove = (event) => {
+      mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    };
+
+    window.addEventListener("mousemove", onMouseMove);
+
+    // Set up post-processing
+    const composer = new EffectComposer(renderer);
+    const renderPass = new RenderPass(scene, camera);
+    composer.addPass(renderPass);
+
+    const fisheyeShader = {
+      uniforms: {
+        tDiffuse: { value: null },
+        mouse: { value: new THREE.Vector2(0, 0) },
+        strength: { value: 2 },
+      },
+      vertexShader: `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform sampler2D tDiffuse;
+        uniform vec2 mouse;
+        uniform float strength;
+        varying vec2 vUv;
+        void main() {
+          vec2 uv = vUv;
+          vec2 offset = mouse - uv;
+          float dist = length(offset);
+          float falloff = smoothstep(0.0, strength, dist);
+          uv += offset * (1.0 - falloff) * 0.05; // Adjust the distortion strength
+          gl_FragColor = texture2D(tDiffuse, uv);
+        }
+      `,
+    };
+
+    const fisheyePass = new ShaderPass(fisheyeShader);
+    composer.addPass(fisheyePass);
 
     const animate = () => {
       requestAnimationFrame(animate);
 
-      const elapsedTime = clock.getElapsedTime();
+      const elapsedTime = new THREE.Clock().getElapsedTime();
 
-      // Update particle positions to create the effect of ocean currents
-      const positions = particles.attributes.position.array;
-      for (let i = 0; i < particleCount; i++) {
-        positions[i * 3 + 1] += Math.sin(elapsedTime + positions[i * 3]) * 0.01;
-        positions[i * 3] += Math.cos(elapsedTime + positions[i * 3 + 1]) * 0.01;
-        // Confine particles within the screen bounds
-        if (positions[i * 3] < -5 || positions[i * 3] > 5) {
-          positions[i * 3] = (Math.random() - 0.5) * 10;
-        }
-        if (positions[i * 3 + 1] < -5 || positions[i * 3 + 1] > 5) {
-          positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-        }
-      }
-      particles.attributes.position.needsUpdate = true;
+      // Rotate the plane for a dynamic effect
+      plane.rotation.z += 0.0003;
 
-      // Rotate the camera slightly based on the mouse position
-      const maxRotation = 0.1; // Maximum rotation angle
-      const rotationX =
-        (mouse.current.y / window.innerHeight - 0.5) * maxRotation;
-      const rotationY =
-        (mouse.current.x / window.innerWidth - 0.5) * maxRotation;
-      camera.position.x = Math.sin(rotationY) * 10;
-      camera.position.y = Math.sin(rotationX) * 5;
-      camera.lookAt(scene.position); // Ensure the camera is always looking at the center
+      // Update fisheye shader with mouse position
+      fisheyePass.uniforms.mouse.value.set(
+        mouse.current.x * 0.5 + 0.5,
+        mouse.current.y * 0.5 + 0.5
+      );
 
-      renderer.render(scene, camera);
+      composer.render();
     };
 
     animate();
-
-    // Track mouse movement
-    const onMouseMove = (event) => {
-      mouse.current.x = event.clientX;
-      mouse.current.y = event.clientY;
-    };
-
-    window.addEventListener("mousemove", onMouseMove);
 
     // Clean up on component unmount
     return () => {
