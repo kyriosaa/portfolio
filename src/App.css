@@ -1,5 +1,34 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .page-bold {
+    font-size: 1.5rem;
+  }
+
+  .page-light {
+    font-size: 0.9rem;
+  }
+
+  .page-subscript {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-bold {
+    font-size: small;
+  }
+
+  .page-light {
+    font-size: small;
+  }
+
+  .page-subscript {
+    font-size: xx-small;
+  }
+}
+
 body {
   color: #dedede;
   font-size: normal;
@@ -31,7 +60,7 @@ body {
 
 .appbar {
   position: absolute;
-  width: 20%;
+  width: 30%;
   height: auto;
   background-color: transparent;
   box-shadow: none;
@@ -113,6 +142,11 @@ body {
 .project-info {
   display: flex;
   justify-content: flex-end;
+}
+
+.project-info img {
+  max-width: 100%;
+  height: auto;
 }
 
 .project-link {
