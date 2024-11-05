@@ -112,7 +112,7 @@ const Background = () => {
       const elapsedTime = new THREE.Clock().getElapsedTime();
 
       // Rotate the plane for a dynamic effect
-      plane.rotation.z += 0.0003;
+      plane.rotation.z += 0.0002;
 
       // Update fisheye shader with mouse position
       fisheyePass.uniforms.mouse.value.set(
