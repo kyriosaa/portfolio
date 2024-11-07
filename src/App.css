@@ -65,6 +65,15 @@ body {
   font-size: x-small;
 }
 
+.mobile-warning {
+  color: black;
+  position: absolute;
+  justify-content: left;
+  text-align: left;
+  bottom: 2vh;
+  font-size: x-small;
+}
+
 .name {
   color: #dedede;
   font-size: xxx-large;
@@ -221,6 +230,15 @@ body {
     justify-content: left;
     text-align: left;
     bottom: 2vh;
+    font-size: xx-small;
+  }
+
+  .mobile-warning {
+    color: #dedede;
+    position: absolute;
+    justify-content: left;
+    text-align: left;
+    bottom: 0.5vh;
     font-size: xx-small;
   }
 

@@ -50,9 +50,14 @@ function App() {
             <Route path="/7binary" element={<Sevenbinary />} />
           </Routes>
         </Router>
-        <Typography class="credit">
-          Website created and designed by Purit Hongjirakul
-        </Typography>
+        <Box>
+          <Typography class="credit">
+            Website created and designed by Purit Hongjirakul
+          </Typography>
+          <Typography class="mobile-warning">
+            Best viewed on a desktop
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
