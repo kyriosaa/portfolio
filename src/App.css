@@ -183,7 +183,7 @@ body {
 }
 
 /* Mobile layout styles */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .border {
     border: 5vh solid black;
     width: 100vw;
