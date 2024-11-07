@@ -1,3 +1,4 @@
+import "./App.css";
 import { Box, Typography } from "@mui/material";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Background from "./Background";
@@ -28,29 +29,8 @@ function App() {
   }, []);
 
   return (
-    <Box
-      sx={{
-        border: "7vh solid black",
-        width: "100vw",
-        height: "100vh",
-        boxSizing: "border-box",
-        overflow: "hidden",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Box
-        sx={{
-          border: "1px solid white",
-          width: "calc(100vw - 14vh)",
-          height: "calc(100vh - 14vh)",
-          boxSizing: "border-box",
-          overflow: "hidden",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <Box class="border">
+      <Box class="border-white">
         <Router>
           <Background />
           <Routes>

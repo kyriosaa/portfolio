@@ -53,7 +53,7 @@ const Home = () => {
 
       <Box class="routes-layout-box">
         <motion.div
-          class="content-alignment"
+          class="bio-alignment"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

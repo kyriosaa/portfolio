@@ -1,34 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-  .page-bold {
-    font-size: 1.5rem;
-  }
-
-  .page-light {
-    font-size: 0.9rem;
-  }
-
-  .page-subscript {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .page-bold {
-    font-size: small;
-  }
-
-  .page-light {
-    font-size: small;
-  }
-
-  .page-subscript {
-    font-size: xx-small;
-  }
-}
-
 body {
   color: #dedede;
   font-size: normal;
@@ -37,8 +8,24 @@ body {
 }
 
 .border {
-  border: 20cap;
-  border: white;
+  border: 7vh solid black;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-white {
+  border: 1px solid white;
+  width: calc(100vw - 14vh);
+  height: calc(100vh - 14vh);
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .app-layout-box {
@@ -94,7 +81,20 @@ body {
   padding-bottom: 8%;
 }
 
+.button {
+  color: inherit;
+  text-transform: capitalize;
+  justify-content: flex-start;
+}
+
 .page-content {
+  color: #dedede;
+  font-size: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: normal;
+}
+
+.selector-content {
   color: #dedede;
   font-size: normal;
   font-family: "Pretendard", sans-serif;
@@ -120,6 +120,14 @@ body {
   font-size: x-small;
   font-family: "Pretendard", sans-serif;
   font-weight: lighter;
+}
+
+.bio-alignment {
+  width: 20%;
+}
+
+.selector-alignment {
+  width: 20%;
 }
 
 .content-alignment {
@@ -163,4 +171,113 @@ body {
 
 .project-back-button {
   padding-top: 5%;
+}
+
+/* Mobile layout styles */
+@media (max-width: 768px) {
+  .border {
+    border: 5vh solid black;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .border-white {
+    border: 1px solid white;
+    width: calc(100vw - 10vh);
+    height: calc(100vh - 10vh);
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-layout-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .appbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-top: 0px;
+    font-size: small;
+  }
+
+  .name {
+    color: #dedede;
+    font-size: 4vh;
+    font-family: "Pretendard", sans-serif;
+    font-weight: normal;
+  }
+
+  .credit {
+    position: absolute;
+    justify-content: left;
+    text-align: left;
+    bottom: 2vh;
+    font-size: xx-small;
+  }
+
+  .button {
+    text-transform: capitalize;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .routes-layout-box {
+    padding: 10px;
+  }
+
+  .bio-alignment {
+    position: absolute;
+    bottom: 6vh;
+    right: 14vw;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 45vw;
+  }
+
+  .selector-alignment {
+    position: absolute;
+    bottom: 7vh;
+    right: 16vw;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 45vw;
+  }
+
+  .selector-content {
+    font-size: normal;
+    text-align: right;
+  }
+
+  .page-content {
+    font-size: small;
+    text-align: left;
+  }
+
+  .page-bold {
+    font-size: 1.2rem;
+  }
+
+  .page-light {
+    font-size: 0.8rem;
+  }
+
+  .page-subscript {
+    font-size: 0.6rem;
+  }
+
+  .content-link {
+    width: 100%;
+    text-align: left;
+  }
 }

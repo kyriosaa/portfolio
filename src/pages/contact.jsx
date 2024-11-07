@@ -54,7 +54,7 @@ const Contact = () => {
 
       <Box class="routes-layout-box">
         <motion.div
-          class="content-alignment"
+          class="selector-alignment"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

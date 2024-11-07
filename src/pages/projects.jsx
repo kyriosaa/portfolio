@@ -53,13 +53,13 @@ const Projects = () => {
 
       <Box class="routes-layout-box">
         <motion.div
-          class="content-alignment"
+          class="selector-alignment"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <Box class="page-content">
+          <Box class="selector-content">
             <Button
               class="content-link"
               component={Link}

@@ -55,7 +55,7 @@ const SoftwareProjectInfo = ({ data }) => {
       </AppBar>
 
       <Box class="routes-layout-box">
-        <Box class="project-alignment">
+        <Box class="bio-alignment">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
