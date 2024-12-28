@@ -70,7 +70,7 @@ const Software = () => {
             >
               <MdArrowBack />
             </IconButton>
-            <Box class="page-content">Software</Box>
+            <Box class="page-content">Software Applications</Box>
             <br />
 
             <SoftwareProjectsList />

@@ -70,7 +70,7 @@ const Hardware = () => {
             >
               <MdArrowBack />
             </IconButton>
-            <Box class="page-content">Hardware</Box>
+            <Box class="page-content">Electronics & Systems</Box>
             <br />
 
             <HardwareProjectsList />

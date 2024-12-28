@@ -66,7 +66,7 @@ const Projects = () => {
               to="/hardware"
               disableRipple
             >
-              Hardware
+              Electronics & Systems
             </Button>
             <br />
             <Button
@@ -75,7 +75,7 @@ const Projects = () => {
               to="/software"
               disableRipple
             >
-              Software
+              Software Applications
             </Button>
           </Box>
         </motion.div>
