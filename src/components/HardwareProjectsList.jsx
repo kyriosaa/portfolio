@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 const HardwareProjectsList = () => {
-  const softwareProjects = [
+  const hardwareProjects = [
+    { name: "DIY Retro Gaming Console", link: "/game-console" },
     { name: "7 Segment Display Binary Decoder", link: "/7binary" },
     // Add more projects as needed
   ];
 
   return (
     <Box>
-      {softwareProjects.map((project, index) => (
+      {hardwareProjects.map((project, index) => (
         <Button
           key={index}
           component={Link}

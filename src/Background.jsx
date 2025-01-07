@@ -109,8 +109,6 @@ const Background = () => {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      const elapsedTime = new THREE.Clock().getElapsedTime();
-
       // Rotate the plane for a dynamic effect
       plane.rotation.z += 0.0003;
 

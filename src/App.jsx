@@ -12,6 +12,7 @@ import Snackstore from "./projects/software/snackstore";
 import ItdlBiography from "./projects/software/itdlbiography";
 import Sevenbinary from "./projects/hardware/7binary";
 import { useEffect } from "react";
+import GameConsole from "./projects/hardware/game-console";
 
 function App() {
   useEffect(() => {
@@ -47,6 +48,7 @@ function App() {
             <Route path="/itdlbiography" element={<ItdlBiography />} />
 
             {/* Hardware Project Routes */}
+            <Route path="/game-console" element={<GameConsole />} />
             <Route path="/7binary" element={<Sevenbinary />} />
           </Routes>
         </Router>
