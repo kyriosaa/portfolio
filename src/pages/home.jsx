@@ -60,19 +60,17 @@ const Home = () => {
           transition={{ duration: 1.5 }}
         >
           <Typography class="page-content">
-            Born in 2002 in Bangkok, Thailand. I have a passion in programming
-            and engineering, which has led me to pursuing my degree in
-            Electrical Engineering and Computer Science.
+            Born in 2002 in Bangkok, Thailand. I am highly interested in
+            embedded engineering and programming, which has led me to pursuing
+            my degree in Electrical Engineering and Computer Science.
           </Typography>
           <Typography class="page-content">
-            I have 1 year of experience in web design, using JavaScript,
-            TypeScript, and Python to create responsive and structured websites.
-            <br />I have knowledge of popular frameworks such as React.js and
-            experience with REST APIs and back-end development.
-          </Typography>
-          <Typography class="page-content">
-            I am currently expanding my portfolio in hardware, learning C++ and
-            programming microcontrollers.
+            I have 2 years of experience in JavaScript and 1 year of experience
+            in C, C++, and Python. I have hands-on experience in robotics, where
+            I have worked with various electronics like Arduino and Raspberry Pi
+            to build automated projects. Additionally, I have expertise in web
+            development using ReactJS, creating complete and responsive websites
+            that integrate both front-end user interfaces and back-end systems.
           </Typography>
         </motion.div>
       </Box>
