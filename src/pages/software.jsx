@@ -1,84 +1,37 @@
-import { Box, Typography, AppBar, Button, IconButton } from "@mui/material";
-import { Link } from "react-router-dom";
-import { MdArrowBack } from "react-icons/md";
-import { motion } from "framer-motion";
-import SoftwareProjectsList from "../components/SoftwareProjectsList";
+import "./css/contact.css";
 
-const Software = () => {
+const Contact = () => {
   return (
-    <Box>
-      <AppBar class="appbar">
-        <Typography class="name" component="div">
-          Purit Hongjirakul
-        </Typography>
-        <Typography class="title" component="div">
-          Engineer & Developer
-        </Typography>
-        <Button
-          component={Link}
-          to="/"
-          color="inherit"
-          disableRipple
-          sx={{
-            textTransform: "capitalize",
-            justifyContent: "flex-start",
-            width: "100%",
-          }}
+    <div>
+      <p className="description">
+        Location: Taipei City, Taiwan <br /> Email:{" "}
+        <a
+          href="mailto:kyriosaaph@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Home
-        </Button>
-        <Button
-          color="inherit"
-          disableRipple
-          sx={{
-            textTransform: "capitalize",
-            justifyContent: "flex-start",
-            width: "100%",
-          }}
+          kyriosaaph@gmail.com
+        </a>
+      </p>
+      <p className="description">
+        <a
+          href="https://www.linkedin.com/in/kyriosaa/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          —
-        </Button>
-        <Button
-          component={Link}
-          to="/contact"
-          color="inherit"
-          disableRipple
-          sx={{
-            textTransform: "capitalize",
-            justifyContent: "flex-start",
-            width: "100%",
-          }}
+          Linkedin
+        </a>
+        <br />
+        <a
+          href="https://github.com/kyriosaa"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Contact
-        </Button>
-      </AppBar>
-
-      <Box class="routes-layout-box">
-        <motion.div
-          class="selector-alignment"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <Box class="page-content">
-            <IconButton
-              class="content-link"
-              disableRipple
-              component={Link}
-              to="/projects"
-            >
-              <MdArrowBack />
-            </IconButton>
-            <Box class="page-content">Software Applications</Box>
-            <br />
-
-            <SoftwareProjectsList />
-          </Box>
-        </motion.div>
-      </Box>
-    </Box>
+          GitHub
+        </a>
+      </p>
+    </div>
   );
 };
 
-export default Software;
+export default Contact;
