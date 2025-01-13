@@ -1,301 +1,102 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@font-face {
+  font-family: IBMVGA;
+  src: url("./assets/PxPlus_IBM_VGA_9x16.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
 
+html,
 body {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: normal;
-}
-
-.border {
-  border: 7vh solid black;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
+  margin: 0;
+  font-family: "IBMVGA", Arial, sans-serif;
+  background-color: #008080;
+  color: white;
+  user-select: none;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.App {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.border-white {
-  border: 1px solid white;
-  width: calc(100vw - 14vh);
-  height: calc(100vh - 14vh);
-  box-sizing: border-box;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-
-.app-layout-box {
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
-/* Needs work depending on the page content */
-.routes-layout-box {
+.desktop-icons {
+  padding: 10px;
+  background-color: #008080;
+  width: 100px;
+}
+
+.desktop-icon {
+  margin-bottom: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.desktop-icon div {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0 #808080;
+}
+
+.desktop-icon a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+}
+
+.window {
+  position: absolute;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  box-shadow: 5px 5px 0px #808080;
+  z-index: 1000;
+  font-size: 15px;
+}
+
+.window-header {
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  cursor: move;
   display: flex;
-  flex-direction: row;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
-  height: 90vh;
-  margin-right: 10%;
 }
 
-.appbar {
-  position: absolute;
-  width: 30%;
-  height: auto;
-  background-color: transparent;
-  box-shadow: none;
-  flex-direction: column;
-  align-items: flex-start;
-  left: 6%;
-  top: 11%;
+.window-header button {
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 5px;
 }
 
-.credit {
-  position: absolute;
-  justify-content: left;
-  text-align: left;
-  bottom: 3vh;
-  font-size: x-small;
+.window-header button:hover {
+  background-color: darkred;
 }
 
-.mobile-warning {
-  color: black;
-  position: absolute;
-  justify-content: left;
-  text-align: left;
-  bottom: 2vh;
-  font-size: x-small;
+iframe {
+  width: 100%;
+  height: calc(100% - 30px);
+  border: none;
 }
 
-.name {
-  color: #dedede;
-  font-size: xxx-large;
-  font-family: "Pretendard", sans-serif;
-  font-weight: normal;
-}
-
-.title {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: lighter;
-  padding-left: 0.2cap;
-  padding-bottom: 8%;
-}
-
-.button {
-  color: inherit;
-  text-transform: capitalize;
-  justify-content: flex-start;
-}
-
-.page-content {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: normal;
-}
-
-.selector-content {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: normal;
-}
-
-.page-bold {
-  color: #dedede;
-  font-size: large;
-  font-family: "Pretendard", sans-serif;
-  font-weight: bold;
-}
-
-.page-light {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: lighter;
-}
-
-.page-subscript {
-  color: #c9c1c1;
-  font-size: x-small;
-  font-family: "Pretendard", sans-serif;
-  font-weight: lighter;
-}
-
-.bio-alignment {
-  width: 20%;
-}
-
-.selector-alignment {
-  width: 20%;
-}
-
-.content-alignment {
-  width: 20%;
-}
-
-.content-link {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: normal;
-  text-transform: capitalize;
-  justify-content: flex-end;
-}
-
-.project-alignment {
-  width: 30%;
-}
-
-.project-info {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.project-info img {
-  max-width: 100%;
-  height: auto;
-}
-
-.project-link {
-  color: #dedede;
-  font-size: normal;
-  font-family: "Pretendard", sans-serif;
-  font-weight: lighter;
-  justify-content: flex-end;
-}
-
-.project-link-area {
-  padding-top: 10%;
-}
-
-.project-back-button {
-  padding-top: 5%;
-}
-
-/* Mobile layout styles */
-@media (max-width: 1200px) {
-  .border {
-    border: 5vh solid black;
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .border-white {
-    border: 1px solid white;
-    width: calc(100vw - 10vh);
-    height: calc(100vh - 10vh);
-    box-sizing: border-box;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .app-layout-box {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .appbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 40px;
-    padding-top: 0px;
-    font-size: small;
-  }
-
-  .name {
-    color: #dedede;
-    font-size: 4vh;
-    font-family: "Pretendard", sans-serif;
-    font-weight: normal;
-  }
-
-  .credit {
-    position: absolute;
-    justify-content: left;
-    text-align: left;
-    bottom: 2vh;
-    font-size: xx-small;
-  }
-
-  .mobile-warning {
-    color: #dedede;
-    position: absolute;
-    justify-content: left;
-    text-align: left;
-    bottom: 0.5vh;
-    font-size: xx-small;
-  }
-
-  .button {
-    text-transform: capitalize;
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  .routes-layout-box {
-    padding: 10px;
-  }
-
-  .bio-alignment {
-    position: absolute;
-    bottom: 6vh;
-    right: 14vw;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 45vw;
-  }
-
-  .selector-alignment {
-    position: absolute;
-    bottom: 7vh;
-    right: 16vw;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 45vw;
-  }
-
-  .selector-content {
-    font-size: normal;
-    text-align: right;
-  }
-
-  .page-content {
-    font-size: small;
-    text-align: left;
-  }
-
-  .page-bold {
-    font-size: 1.2rem;
-  }
-
-  .page-light {
-    font-size: 0.8rem;
-  }
-
-  .page-subscript {
-    font-size: 0.6rem;
-  }
-
-  .content-link {
-    width: 100%;
-    text-align: left;
-  }
+button {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  padding: 0;
+  font-family: inherit;
 }

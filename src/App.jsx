@@ -1,5 +1,4 @@
 import "./App.css";
-import { Box, Typography } from "@mui/material";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Background from "./Background";
 import Home from "./pages/home";
@@ -30,10 +29,9 @@ function App() {
   }, []);
 
   return (
-    <Box class="border">
-      <Box class="border-white">
+    <div>
+      <div>
         <Router>
-          <Background />
           <Routes>
             {/* Main Routes */}
             <Route path="/" element={<Home />} />
@@ -52,16 +50,8 @@ function App() {
             <Route path="/7binary" element={<Sevenbinary />} />
           </Routes>
         </Router>
-        <Box>
-          <Typography class="credit">
-            Website created and designed by Purit Hongjirakul
-          </Typography>
-          <Typography class="mobile-warning">
-            Best viewed on a desktop
-          </Typography>
-        </Box>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }
 
