@@ -1,7 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import Draggable from "react-draggable";
-import { useNavigate, useLocation } from "react-router-dom";
-import "./css/electronics.css";
+import { useState } from "react";
+import "./css/projects.css";
+
+import NotepadIcon from "../assets/icons/notepad.ico";
+
+import Window from "../components/window";
+
 import BinaryDecoder from "../projects/electronics/7-binary";
 import GameConsole from "../projects/electronics/game-console";
 
@@ -15,39 +18,22 @@ const items = [
     id: 1,
     label: "7 Segment Display Binary Decoder",
     component: BinaryDecoderWindow,
-    position: { top: 25, left: 175 },
-    dimensions: { width: 600, height: 600 },
+    icon: NotepadIcon,
+    position: { top: 10, left: 10 },
+    dimensions: { width: 900, height: 600 },
   },
   {
     id: 2,
-    label: "Game Console",
+    label: "Retro Game Console",
     component: GameConsoleWindow,
-    position: { top: 45, left: 325 },
-    dimensions: { width: 600, height: 600 },
+    icon: NotepadIcon,
+    position: { top: 10, left: 10 },
+    dimensions: { width: 900, height: 600 },
   },
 ];
 
 const Electronics = () => {
-  const mountRef = useRef(null);
   const [openWindows, setOpenWindows] = useState([]);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    const params = new URLSearchParams();
-    openWindows.forEach((win) => {
-      params.append(win.label.toLowerCase(), "true");
-    });
-    navigate(`?${params.toString()}`, { replace: true });
-  }, [openWindows, navigate]);
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const initialWindows = items.filter((item) =>
-      params.has(item.label.toLowerCase())
-    );
-    setOpenWindows(initialWindows);
-  }, [location.search]);
 
   const handleDoubleClick = (item) => {
     setOpenWindows((prev) => {
@@ -71,54 +57,29 @@ const Electronics = () => {
 
   return (
     <div>
-      <div className="App">
-        <div className="desktop-list">
+      <div>
+        <div className="projects-list">
           <ul>
-            {items.map((item) => (
-              <a
-                key={item.id}
-                onDoubleClick={() => handleDoubleClick(item)}
-                className="desktop-item"
-              >
-                {item.label}
-              </a>
-            ))}
+            {items
+              .slice()
+              .reverse()
+              .map((item) => (
+                <li
+                  key={item.id}
+                  onClick={() => handleDoubleClick(item)}
+                  className="projects-item"
+                >
+                  {item.label}
+                </li>
+              ))}
           </ul>
         </div>
 
-        <div ref={mountRef} style={{ flex: 1 }}></div>
-
-        {openWindows.map((win) => {
-          const Component = win.component;
-          return (
-            <Draggable
-              key={win.id}
-              defaultPosition={{ x: win.position.left, y: win.position.top }}
-            >
-              <div
-                className="window"
-                style={{
-                  width: `${win.dimensions.width}px`,
-                  height: `${win.dimensions.height}px`,
-                }}
-              >
-                <div className="window-header">
-                  {win.label}
-                  <button onClick={() => closeWindow(win.id)}>X</button>
-                </div>
-                <div
-                  className="window-content"
-                  style={{
-                    width: `${win.dimensions.width - 20}px`,
-                    height: `${win.dimensions.height - 35}px`,
-                  }}
-                >
-                  <Component />
-                </div>
-              </div>
-            </Draggable>
-          );
-        })}
+        <div>
+          {openWindows.map((win) => (
+            <Window key={win.id} {...win} closeWindow={closeWindow} />
+          ))}
+        </div>
       </div>
     </div>
   );

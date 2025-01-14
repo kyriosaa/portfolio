@@ -1,6 +1,7 @@
-import { HashRouter as Router } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Desktop from "./Desktop";
+import Electronics from "./pages/electronics";
 
 function App() {
   useEffect(() => {
@@ -18,13 +19,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <div>
-        <Router>
-          <Desktop />
-        </Router>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Desktop />} />
+        <Route path="/electronics" element={<Electronics />} />
+      </Routes>
+    </Router>
   );
 }
 

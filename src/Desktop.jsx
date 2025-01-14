@@ -1,8 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import Draggable from "react-draggable";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Desktop.css";
+
+import EarthIcon from "./assets/icons/earth.ico";
+import ElectronicsIcon from "./assets/icons/electronics.ico";
+import SoftwareIcon from "./assets/icons/software.ico";
+import PhoneIcon from "./assets/icons/phone.ico";
+
+import Window from "./components/window";
+import Taskbar from "./components/taskbar";
+
 import About from "./pages/about";
 import Electronics from "./pages/electronics";
 import Software from "./pages/software";
@@ -18,34 +26,34 @@ const ContactWindow = () => <Contact />;
 const icons = [
   {
     id: 1,
-    label: "ABOUT",
+    label: "About",
     component: AboutWindow,
-    icon: "/icons/earth.ico",
-    position: { top: 25, left: 175 },
-    dimensions: { width: 600, height: 520 },
+    icon: EarthIcon,
+    position: { top: 65, left: 1200 },
+    dimensions: { width: 600, height: 380 },
   },
   {
     id: 2,
-    label: "ELECTRONICS PROJECTS",
+    label: "Electronics Projects",
     component: ElectronicsWindow,
-    icon: "/icons/electronics.ico",
-    position: { top: 45, left: 325 },
+    icon: ElectronicsIcon,
+    position: { top: 55, left: 200 },
     dimensions: { width: 400, height: 300 },
   },
   {
     id: 3,
-    label: "SOFTWARE PROJECTS",
+    label: "Software Projects",
     component: SoftwareWindow,
-    icon: "/icons/software.ico",
-    position: { top: 500, left: 225 },
+    icon: SoftwareIcon,
+    position: { top: 80, left: 650 },
     dimensions: { width: 400, height: 300 },
   },
   {
     id: 4,
-    label: "CONTACT",
+    label: "Contact",
     component: ContactWindow,
-    icon: "/icons/phone.ico",
-    position: { top: 600, left: 1150 },
+    icon: PhoneIcon,
+    position: { top: 650, left: 1400 },
     dimensions: { width: 330, height: 200 },
   },
 ];
@@ -95,8 +103,11 @@ const Desktop = () => {
     openWindows.forEach((win) => {
       params.append(win.label.toLowerCase(), "true");
     });
-    navigate(`?${params.toString()}`, { replace: true });
-  }, [openWindows, navigate]);
+    const newSearch = `?${params.toString()}`;
+    if (location.search !== newSearch) {
+      navigate(newSearch, { replace: true });
+    }
+  }, [openWindows, navigate, location.search]);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -144,57 +155,11 @@ const Desktop = () => {
 
         <div ref={mountRef} style={{ flex: 1 }}></div>
 
-        {openWindows.map((win) => {
-          const Component = win.component;
-          return (
-            <Draggable
-              key={win.id}
-              defaultPosition={{ x: win.position.left, y: win.position.top }}
-            >
-              <div
-                className="window"
-                style={{
-                  width: `${win.dimensions.width}px`,
-                  height: `${win.dimensions.height}px`,
-                }}
-              >
-                <div className="window-header">
-                  {win.label}
-                  <button onClick={() => closeWindow(win.id)}>X</button>
-                </div>
-                <div
-                  className="window-content"
-                  style={{
-                    width: `${win.dimensions.width - 20}px`,
-                    height: `${win.dimensions.height - 35}px`,
-                  }}
-                >
-                  <Component />
-                </div>
-              </div>
-            </Draggable>
-          );
-        })}
+        {openWindows.map((win) => (
+          <Window key={win.id} {...win} closeWindow={closeWindow} />
+        ))}
       </div>
-      <div className="taskbar">
-        <div className="start-button">Start</div>
-        <div className="separator"></div>
-        <div className="taskbar-icons">
-          {openWindows.map((win) => (
-            <div
-              key={win.id}
-              className="taskbar-icon"
-              onClick={() => closeWindow(win.id)}
-            >
-              <img
-                src={win.icon}
-                alt={win.label}
-                style={{ width: "20px", height: "20px" }}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <Taskbar openWindows={openWindows} closeWindow={closeWindow} />
     </div>
   );
 };

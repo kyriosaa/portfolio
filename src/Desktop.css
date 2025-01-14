@@ -1,6 +1,6 @@
 @font-face {
   font-family: IBMVGA;
-  src: url("./assets/PxPlus_IBM_VGA_9x16.ttf");
+  src: url("./assets/fonts/W95FA.otf");
   font-weight: normal;
   font-size: normal;
 }
@@ -26,25 +26,29 @@ body {
 }
 
 .desktop-icons {
-  padding-top: 20px;
+  padding-top: 35px;
   padding-left: 25px;
-  background-color: #008080;
   width: 100px;
 }
 
 .desktop-icon {
-  margin-bottom: 30px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5%;
   text-align: center;
   cursor: pointer;
   color: white;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.desktop-icon div {
+.desktop-icon:hover {
+  background-color: #007777;
+}
+
+.desktop-icon img {
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  box-shadow: 2px 2px 0 #808080;
+  transition: transform 0.2s ease;
 }
 
 .desktop-icon a {
@@ -52,104 +56,7 @@ body {
   color: white;
   font-size: 16px;
   display: block;
-  margin-top: 1px;
-}
-
-.desktop-icon img {
-  width: 50px;
-  height: 50px;
-}
-
-.window {
-  position: absolute;
-  background-color: #ffffff;
-  border: 6px double #000;
-  border-radius: 1%;
-  z-index: 1000;
-  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
-  resize: none;
-}
-
-.window-header {
-  background-color: #000080;
-  color: white;
-  padding: 5px;
-  cursor: move;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.window-header button {
-  float: right;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
-  padding: 0 5px;
-}
-
-.window-header button:hover {
-  background-color: darkred;
-}
-
-.window-content {
-  background-color: #d2d2d2;
-  padding-left: 10px;
-  padding-right: 10px;
-  overflow: auto;
-  resize: none;
-}
-
-.taskbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background-color: #d2d2d2;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-  justify-content: left;
-  box-sizing: border-box;
-  padding-right: 10px;
-  z-index: 1000;
-}
-
-.start-button {
-  background-color: #d2d2d2;
-  color: black;
-  padding: 5px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.separator {
-  width: 1px;
-  height: 100%;
-  background-color: #9d9d9d;
-  margin: 0 10px;
-  align-self: center;
-}
-
-.taskbar-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.taskbar-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  background-color: #d2d2d2;
-  line-height: 30px;
-  cursor: pointer;
-  color: black;
+  margin-top: 6px;
 }
 
 iframe {

@@ -5,10 +5,10 @@ const About = () => {
     <div>
       <p className="header">Hello!</p>
       <p className="description">
-        My name is Purit Hongjirakul. I was born in 2002 in Bangkok, Thailand. I
-        am highly interested in embedded engineering and programming, which has
-        led me to pursuing my degree in Electrical Engineering and Computer
-        Science.
+        My name is Purit (Kin) Hongjirakul. I was born in 2002 in Bangkok,
+        Thailand. I am highly interested in embedded engineering and
+        programming, which has led me to pursuing my degree in Electrical
+        Engineering and Computer Science.
       </p>
       <br />
       <p className="description">
