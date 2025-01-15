@@ -38,7 +38,7 @@ const items = [
     component: WipeoutWindow,
     icon: NotepadIcon,
     position: { top: 10, left: 10 },
-    dimensions: { width: 900, height: 400 },
+    dimensions: { width: 900, height: 600 },
   },
 ];
 

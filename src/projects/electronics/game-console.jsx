@@ -1,9 +1,9 @@
 import Projects from "../../components/project-contents";
 
-import Img1 from "../../assets/projects/game-console/game-console1.jpg";
-import Img2 from "../../assets/projects/game-console/game-console2.jpg";
-import Img3 from "../../assets/projects/game-console/game-console3.jpg";
-import Img4 from "../../assets/projects/game-console/game-console4.jpg";
+import Img1 from "../../assets/projects/electronics/game-console/game-console1.jpg";
+import Img2 from "../../assets/projects/electronics/game-console/game-console2.jpg";
+import Img3 from "../../assets/projects/electronics/game-console/game-console3.jpg";
+import Img4 from "../../assets/projects/electronics/game-console/game-console4.jpg";
 
 const GameConsole = () => {
   const images = [

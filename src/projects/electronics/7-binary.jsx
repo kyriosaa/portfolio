@@ -1,10 +1,10 @@
 import Projects from "../../components/project-contents";
 
-import Img1 from "../../assets/projects/7-binary/7binary-1.jpg";
-import Img2 from "../../assets/projects/7-binary/7binary-2.jpg";
-import Img3 from "../../assets/projects/7-binary/7binary-3.jpg";
-import Img4 from "../../assets/projects/7-binary/7binary-4.jpg";
-import Img5 from "../../assets/projects/7-binary/7binary-5.jpg";
+import Img1 from "../../assets/projects/electronics/7-binary/7binary-1.jpg";
+import Img2 from "../../assets/projects/electronics/7-binary/7binary-2.jpg";
+import Img3 from "../../assets/projects/electronics/7-binary/7binary-3.jpg";
+import Img4 from "../../assets/projects/electronics/7-binary/7binary-4.jpg";
+import Img5 from "../../assets/projects/electronics/7-binary/7binary-5.jpg";
 
 const SevenBinary = () => {
   const images = [

@@ -117,7 +117,7 @@ const Desktop = () => {
     setOpenWindows(initialWindows);
   }, [location.search]);
 
-  const handleDoubleClick = (icon) => {
+  const handleClick = (icon) => {
     setOpenWindows((prev) => {
       if (!prev.some((win) => win.id === icon.id)) {
         return [
@@ -145,7 +145,7 @@ const Desktop = () => {
             <div
               key={icon.id}
               className="desktop-icon"
-              onDoubleClick={() => handleDoubleClick(icon)}
+              onClick={() => handleClick(icon)}
             >
               <img src={icon.icon} alt={icon.label} />
               <a>{icon.label}</a>

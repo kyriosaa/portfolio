@@ -1,10 +1,9 @@
 import Projects from "../../components/project-contents";
 
-import Img1 from "../../assets/projects/7-binary/7binary-1.jpg";
-import Img2 from "../../assets/projects/7-binary/7binary-2.jpg";
-import Img3 from "../../assets/projects/7-binary/7binary-3.jpg";
-import Img4 from "../../assets/projects/7-binary/7binary-4.jpg";
-import Img5 from "../../assets/projects/7-binary/7binary-5.jpg";
+import Img1 from "../../assets/projects/software/itdlbiography/itdlbiography-1.jpg";
+import Img2 from "../../assets/projects/software/itdlbiography/itdlbiography-2.jpg";
+import Img3 from "../../assets/projects/software/itdlbiography/itdlbiography-3.jpg";
+import Img4 from "../../assets/projects/software/itdlbiography/itdlbiography-4.jpg";
 
 const ItdlBiography = () => {
   const images = [
@@ -12,7 +11,6 @@ const ItdlBiography = () => {
     { src: Img2, alt: "Image 2" },
     { src: Img3, alt: "Image 3" },
     { src: Img4, alt: "Image 4" },
-    { src: Img5, alt: "Image 5" },
   ];
 
   const title = "AI-Enhanced Website Biography";
