@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
+// import * as THREE from "three";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Desktop.css";
 
@@ -64,39 +64,39 @@ const Desktop = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    );
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+  // useEffect(() => {
+  //   const scene = new THREE.Scene();
+  //   const camera = new THREE.PerspectiveCamera(
+  //     75,
+  //     window.innerWidth / window.innerHeight,
+  //     0.1,
+  //     1000
+  //   );
+  //   const renderer = new THREE.WebGLRenderer();
+  //   renderer.setSize(window.innerWidth, window.innerHeight);
+  //   mountRef.current.appendChild(renderer.domElement);
 
-    scene.background = new THREE.Color("#008080");
+  //   scene.background = new THREE.Color("#008080");
 
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+  //   const geometry = new THREE.BoxGeometry();
+  //   const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+  //   const cube = new THREE.Mesh(geometry, material);
+  //   scene.add(cube);
 
-    cube.position.z = -5;
+  //   cube.position.z = -5;
 
-    const animate = () => {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    };
-    animate();
+  //   const animate = () => {
+  //     requestAnimationFrame(animate);
+  //     cube.rotation.x += 0.01;
+  //     cube.rotation.y += 0.01;
+  //     renderer.render(scene, camera);
+  //   };
+  //   animate();
 
-    return () => {
-      mountRef.current.removeChild(renderer.domElement);
-    };
-  }, []);
+  //   return () => {
+  //     mountRef.current.removeChild(renderer.domElement);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const params = new URLSearchParams();
