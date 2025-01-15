@@ -31,7 +31,7 @@ const Window = ({
           className="window-content"
           style={{
             width: `${dimensions.width - 20}px`,
-            height: `${dimensions.height - 30}px`,
+            height: `${dimensions.height - 32}px`,
           }}
         >
           <Component />
