@@ -1,9 +1,17 @@
 import Projects from "../../components/project-contents";
 
 import Img1 from "../../assets/projects/software/wipeout/wipeout-1.jpg";
+import Img2 from "../../assets/projects/software/wipeout/wipeout-2.jpg";
+import Img3 from "../../assets/projects/software/wipeout/wipeout-3.jpg";
+import Img4 from "../../assets/projects/software/wipeout/wipeout-4.jpg";
 
 const Wipeout = () => {
-  const images = [{ src: Img1, alt: "Image 1" }];
+  const images = [
+    { src: Img1, alt: "Image 1" },
+    { src: Img2, alt: "Image 2" },
+    { src: Img3, alt: "Image 3" },
+    { src: Img4, alt: "Image 4" },
+  ];
 
   const title = "Wipeout";
   const text =

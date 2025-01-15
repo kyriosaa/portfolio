@@ -1,9 +1,19 @@
 import Projects from "../../components/project-contents";
 
 import Img1 from "../../assets/projects/software/snackstore/snackstore-1.jpg";
+import Img2 from "../../assets/projects/software/snackstore/snackstore-2.jpg";
+import Img3 from "../../assets/projects/software/snackstore/snackstore-3.jpg";
+import Img4 from "../../assets/projects/software/snackstore/snackstore-4.jpg";
+import Img5 from "../../assets/projects/software/snackstore/snackstore-5.jpg";
 
 const SnackStore = () => {
-  const images = [{ src: Img1, alt: "Image 1" }];
+  const images = [
+    { src: Img1, alt: "Image 1" },
+    { src: Img2, alt: "Image 2" },
+    { src: Img3, alt: "Image 3" },
+    { src: Img4, alt: "Image 4" },
+    { src: Img5, alt: "Image 5" },
+  ];
 
   const title = "SnackStore";
   const text =
