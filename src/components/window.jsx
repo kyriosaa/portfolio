@@ -10,6 +10,7 @@ const Window = ({
   dimensions,
   closeWindow,
   icon,
+  zIndex,
 }) => {
   // Ensure the window's position doesn't go out of bounds
   const clampedPosition = {
@@ -33,6 +34,7 @@ const Window = ({
         style={{
           width: `${dimensions.width}px`,
           height: `${dimensions.height}px`,
+          zIndex: zIndex,
         }}
       >
         <div className="window-header">
@@ -70,6 +72,7 @@ Window.propTypes = {
   }).isRequired,
   closeWindow: PropTypes.func.isRequired,
   icon: PropTypes.string.isRequired,
+  zIndex: PropTypes.number.isRequired,
 };
 
 export default Window;
