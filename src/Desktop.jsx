@@ -159,7 +159,11 @@ const Desktop = () => {
           <Window key={win.id} {...win} closeWindow={closeWindow} />
         ))}
       </div>
-      <Taskbar openWindows={openWindows} closeWindow={closeWindow} />
+      <Taskbar
+        openWindows={openWindows}
+        closeWindow={closeWindow}
+        icons={icons}
+      />
     </div>
   );
 };

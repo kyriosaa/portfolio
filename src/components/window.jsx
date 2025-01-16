@@ -11,8 +11,23 @@ const Window = ({
   closeWindow,
   icon,
 }) => {
+  // Ensure the window's position doesn't go out of bounds
+  const clampedPosition = {
+    x: Math.min(
+      Math.max(0, position.left),
+      window.innerWidth - dimensions.width
+    ),
+    y: Math.min(
+      Math.max(0, position.top),
+      window.innerHeight - dimensions.height
+    ),
+  };
+
   return (
-    <Draggable defaultPosition={{ x: position.left, y: position.top }}>
+    <Draggable
+      defaultPosition={{ x: clampedPosition.x, y: clampedPosition.y }}
+      bounds="parent" // Keeps the window within the parent container
+    >
       <div
         className="window"
         style={{
