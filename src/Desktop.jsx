@@ -98,11 +98,6 @@ const Desktop = () => {
   //   };
   // }, []);
 
-  const getHighestZIndex = () =>
-    openWindows.length > 0
-      ? Math.max(...openWindows.map((win) => win.zIndex || 0))
-      : 0;
-
   useEffect(() => {
     const params = new URLSearchParams();
     openWindows.forEach((win) => {
@@ -124,25 +119,17 @@ const Desktop = () => {
 
   const handleClick = (icon) => {
     setOpenWindows((prev) => {
-      const existingWindow = prev.find((win) => win.id === icon.id);
-
-      if (existingWindow) {
-        // Bring the clicked window to the front
-        return prev.map((win) =>
-          win.id === icon.id ? { ...win, zIndex: getHighestZIndex() + 1 } : win
-        );
+      if (!prev.some((win) => win.id === icon.id)) {
+        return [
+          ...prev,
+          {
+            ...icon,
+            position: icon.position || { top: 150, left: 150 },
+            dimensions: icon.dimensions || { width: 600, height: 500 },
+          },
+        ];
       }
-
-      // Open a new window and assign it the highest zIndex
-      return [
-        ...prev,
-        {
-          ...icon,
-          position: icon.position || { top: 150, left: 150 },
-          dimensions: icon.dimensions || { width: 600, height: 500 },
-          zIndex: getHighestZIndex() + 1,
-        },
-      ];
+      return prev;
     });
   };
 

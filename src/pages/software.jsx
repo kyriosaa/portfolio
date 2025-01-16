@@ -45,7 +45,7 @@ const items = [
 const Software = () => {
   const [openWindows, setOpenWindows] = useState([]);
 
-  const handleDoubleClick = (item) => {
+  const handleClick = (item) => {
     setOpenWindows((prev) => {
       if (!prev.some((win) => win.id === item.id)) {
         return [
@@ -76,7 +76,7 @@ const Software = () => {
               .map((item) => (
                 <li
                   key={item.id}
-                  onClick={() => handleDoubleClick(item)}
+                  onClick={() => handleClick(item)}
                   className="projects-item"
                 >
                   {item.label}

@@ -25,10 +25,7 @@ const Window = ({
   };
 
   return (
-    <Draggable
-      defaultPosition={{ x: clampedPosition.x, y: clampedPosition.y }}
-      bounds="parent" // Keeps the window within the parent container
-    >
+    <Draggable defaultPosition={{ x: clampedPosition.x, y: clampedPosition.y }}>
       <div
         className="window"
         style={{

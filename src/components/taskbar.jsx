@@ -1,22 +1,54 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./css/taskbar.css";
 import PropTypes from "prop-types";
 
 import Menu from "./menu";
 import Clock from "./clock";
 
-const Taskbar = ({ icons, openWindows, closeWindow }) => {
+const Taskbar = ({ openWindows, closeWindow }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const menuButtonRef = useRef(null); // Ref for the menu button
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // If the menu is open and the click is outside both the menu and the button
+      if (
+        menuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        setMenuOpen(false); // Close the menu
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <div className="taskbar">
       <div className="left">
-        <div className="menu-button" onClick={toggleMenu}>
+        <div
+          ref={menuButtonRef} // Attach the ref to the menu button
+          className="menu-button"
+          onClick={toggleMenu}
+        >
           MENU
         </div>
-        {menuOpen && <Menu icons={icons} />}
+        {menuOpen && (
+          <div ref={menuRef} className="menu-container">
+            <Menu />
+          </div>
+        )}
         <div className="separator"></div>
         <div className="taskbar-icons">
           {openWindows.map((win) => (

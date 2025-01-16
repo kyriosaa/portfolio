@@ -1,36 +1,53 @@
 import "./css/menu.css";
-import PropTypes from "prop-types";
 
-const Menu = ({ icons }) => {
+const Menu = () => {
   return (
     <div className="menu">
-      {icons.map((icon) => (
-        <div
-          key={icon.id}
-          className="menu-item"
-          onClick={() => icon.onClick && icon.onClick()}
-        >
-          <img
-            src={icon.icon}
-            alt={icon.label}
-            style={{ width: "20px", height: "20px", marginRight: "10px" }}
-          />
-          {icon.label}
-        </div>
-      ))}
+      <div className="credits">
+        <p>
+          WEBPAGE
+          <br />
+          Built by{" "}
+          <a
+            href="https://www.linkedin.com/in/kyriosaa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Purit Hongjirakul
+          </a>
+          <br />
+          Using{" "}
+          <a
+            href="https://react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://threejs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Three
+          </a>
+        </p>
+        <p>
+          FONT
+          <br />
+          <a
+            href="https://www.dafont.com/w95fa.font"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            W95FA
+          </a>{" "}
+          by FontsArena
+        </p>
+      </div>
     </div>
   );
-};
-
-Menu.propTypes = {
-  icons: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      icon: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      onClick: PropTypes.func.isRequired,
-    })
-  ).isRequired,
 };
 
 export default Menu;
