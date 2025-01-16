@@ -141,10 +141,11 @@ const Desktop = () => {
     <div>
       <div className="App">
         <div className="desktop-icons">
-          {icons.map((icon) => (
+          {icons.map((icon, index) => (
             <div
               key={icon.id}
               className="desktop-icon"
+              style={{ animationDelay: `${index * 0.4}s` }}
               onClick={() => handleClick(icon)}
             >
               <img src={icon.icon} alt={icon.label} />
@@ -160,6 +161,7 @@ const Desktop = () => {
         ))}
       </div>
       <Taskbar
+        className="taskbar"
         openWindows={openWindows}
         closeWindow={closeWindow}
         icons={icons}
