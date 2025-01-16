@@ -16,8 +16,9 @@ const SnackStore = () => {
   ];
 
   const title = "SnackStore";
-  const text =
+  const text1 =
     "A modern e-commerce store made using TypeScript, C#, .NET, React.js, and Redux. This website sells Taiwanese snacks and comes equipped with features such as a database, membership login, website cookies, store item management, payment using Stripe, etc.";
+  const text2 = "";
   const date = "Jun 2024";
   const link = "";
   const source = "https://github.com/kyriosaa/snack-store";
@@ -26,7 +27,8 @@ const SnackStore = () => {
     <Projects
       images={images}
       title={title}
-      text={text}
+      text1={text1}
+      text2={text2}
       date={date}
       link={link}
       source={source}

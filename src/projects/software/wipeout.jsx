@@ -14,8 +14,9 @@ const Wipeout = () => {
   ];
 
   const title = "Wipeout";
-  const text =
+  const text1 =
     "A simple web browser obstacle game made using TypeScript and Three.js";
+  const text2 = "";
   const date = "Oct 2024";
   const link = "https://kyriosaa.github.io/wipeout/";
   const source = "https://github.com/kyriosaa/wipeout";
@@ -24,7 +25,8 @@ const Wipeout = () => {
     <Projects
       images={images}
       title={title}
-      text={text}
+      text1={text1}
+      text2={text2}
       date={date}
       link={link}
       source={source}

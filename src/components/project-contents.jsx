@@ -1,7 +1,15 @@
 import PropTypes from "prop-types";
 import "./css/project-contents.css";
 
-const ProjectContents = ({ images, title, text, date, link, source }) => {
+const ProjectContents = ({
+  images,
+  title,
+  text1,
+  text2,
+  date,
+  link,
+  source,
+}) => {
   return (
     <div className="layout-container">
       {/* Images Section */}
@@ -21,17 +29,20 @@ const ProjectContents = ({ images, title, text, date, link, source }) => {
       <div className="text-container">
         <div className="fixed">
           <p className="title">{title}</p>
-          <p className="text"> {text}</p>
+          <p className="text">{text1}</p>
+          <p className="text">{text2}</p>
           <p className="date">{date}</p>
           <br />
-          <a
-            className="link"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {link}
-          </a>
+          <div className="links-div">
+            <a
+              className="link"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link}
+            </a>
+          </div>
           <br />
           <a
             className="source"
@@ -55,7 +66,8 @@ ProjectContents.propTypes = {
     })
   ).isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text1: PropTypes.string.isRequired,
+  text2: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,

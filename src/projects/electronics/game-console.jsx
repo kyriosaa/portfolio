@@ -14,8 +14,9 @@ const GameConsole = () => {
   ];
 
   const title = "Retro Game Console";
-  const text =
+  const text1 =
     "A retro gaming console I built in my free time. It is powered by a Raspberry Pi 4 Model B running Retropie OS. The entire system runs on a rechargable power bank to allow for portability. This gaming console can play games ranging from the Atari 2600 all the way to the original Playstation.";
+  const text2 = "";
   const date = "Jan 2025";
   const link = "https://youtu.be/S4q6FUawJAY";
   const source = "";
@@ -24,7 +25,8 @@ const GameConsole = () => {
     <Projects
       images={images}
       title={title}
-      text={text}
+      text1={text1}
+      text2={text2}
       date={date}
       link={link}
       source={source}

@@ -14,8 +14,9 @@ const ItdlBiography = () => {
   ];
 
   const title = "AI-Enhanced Website Biography";
-  const text =
+  const text1 =
     "A website built with JavaScript and React.js that gives the biography of Lyn Shun-Lien Sung by incorporating different elements such as an AI chatbot, AI image generation, and a notes editor.";
+  const text2 = "";
   const date = "Jun 2024";
   const link = "https://itdl-biography.vercel.app";
   const source = "https://github.com/kyriosaa/itdl-biography";
@@ -24,7 +25,8 @@ const ItdlBiography = () => {
     <Projects
       images={images}
       title={title}
-      text={text}
+      text1={text1}
+      text2={text2}
       date={date}
       link={link}
       source={source}

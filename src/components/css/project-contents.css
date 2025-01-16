@@ -6,7 +6,7 @@
 
 /* Images Section */
 .images-container {
-  flex: 1;
+  flex: 1; /* Take up one part of the space */
   padding: 5px;
 }
 
@@ -25,16 +25,24 @@
   flex: 1;
   padding: 15px;
   display: flex;
-  align-items: top;
-  justify-content: top;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   color: black;
   line-height: 1.6;
   text-align: left;
+  overflow: hidden;
 }
 
 .fixed {
   position: fixed;
   width: 48%;
+}
+
+.links-div {
+  width: 440px;
+  height: auto;
+  overflow: hidden;
 }
 
 .title {

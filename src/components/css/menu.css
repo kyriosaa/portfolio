@@ -2,17 +2,21 @@
   position: absolute;
   left: 0vw;
   bottom: 4.25vh;
-  background-color: #f0f0f0;
+  background-color: #d2d2d2;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
   z-index: 1001;
   width: 190px;
-  height: 160px;
+  height: auto;
 }
 
 .credits {
   font-size: 16px;
   padding-top: 10px;
   padding-left: 15px;
+}
+
+.ibmvga {
+  font-family: "IBMVGA", Arial, sans-serif;
 }

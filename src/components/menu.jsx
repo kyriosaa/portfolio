@@ -44,6 +44,16 @@ const Menu = () => {
             W95FA
           </a>{" "}
           by FontsArena
+          <br />
+          <a
+            href="https://int10h.org/oldschool-pc-fonts/fontlist/#subs-ibm-g2-vga"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ibmvga"
+          >
+            IBM VGA
+          </a>{" "}
+          <span className="ibmvga">by VileR</span>
         </p>
       </div>
     </div>

@@ -16,8 +16,9 @@ const SevenBinary = () => {
   ];
 
   const title = "7 Segment Display Binary Decoder";
-  const text =
+  const text1 =
     "A device that translates binary inputs into decimal outputs. A binary input is fed into the device using the 4 bit DIP switch and goes through the 7447 BCD decoder. The decimal output is then shown on the 7 segment display. This device is powered by a 6V power supply.";
+  const text2 = "";
   const date = "Nov 2024";
   const link = "";
   const source = "";
@@ -26,7 +27,8 @@ const SevenBinary = () => {
     <Projects
       images={images}
       title={title}
-      text={text}
+      text1={text1}
+      text2={text2}
       date={date}
       link={link}
       source={source}

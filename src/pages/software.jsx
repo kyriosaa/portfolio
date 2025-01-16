@@ -8,11 +8,13 @@ import Window from "../components/window";
 import ItdlBiography from "../projects/software/itdl-biography";
 import SnackStore from "../projects/software/snackstore";
 import Wipeout from "../projects/software/wipeout";
+import Ptcg from "../projects/software/ptcg";
 
 // Custom Components for each window
 const ItdlBiographyWindow = () => <ItdlBiography />;
 const SnackStoreWindow = () => <SnackStore />;
 const WipeoutWindow = () => <Wipeout />;
+const PTCGWindow = () => <Ptcg />;
 
 // Add a `component` property for each item in the list
 const items = [
@@ -40,6 +42,14 @@ const items = [
     position: { top: 10, left: 10 },
     dimensions: { width: 900, height: 600 },
   },
+  {
+    id: 4,
+    label: "PTCG Bot",
+    component: PTCGWindow,
+    icon: NotepadIcon,
+    position: { top: 10, left: 10 },
+    dimensions: { width: 900, height: 600 },
+  },
 ];
 
 const Software = () => {
@@ -53,7 +63,7 @@ const Software = () => {
           {
             ...item,
             position: item.position || { top: 150, left: 150 },
-            dimensions: item.dimensions || { width: 600, height: 500 },
+            dimensions: item.dimensions || { width: 900, height: 500 },
           },
         ];
       }
