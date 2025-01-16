@@ -1,24 +1,3 @@
-@font-face {
-  font-family: IBMVGA;
-  src: url("./assets/fonts/W95FA.otf");
-  font-weight: normal;
-  font-size: normal;
-}
-
-html,
-body {
-  margin: 0;
-  font-family: "IBMVGA", Arial, sans-serif;
-  background-color: #008080;
-  color: white;
-  user-select: none;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .App {
   display: flex;
   height: 95vh;
