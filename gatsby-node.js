@@ -11,7 +11,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`src/templates/post.js`);
   const tagTemplate = path.resolve('src/templates/tag.js');
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
 
   const result = await graphql(`
     {
@@ -44,18 +43,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Create post detail pages
   const posts = result.data.postsRemark.edges;
-
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (node.frontmatter.slug !== '/pensieve/clickable-cards/') {
-      createPage({
-        path: node.frontmatter.slug,
-        component: blogPostTemplate,
-        context: {
-          slug: node.frontmatter.slug,
-        },
-      });
-    }
-  });
 
   posts.forEach(({ node }) => {
     createPage({
