@@ -1,6 +1,3 @@
-# Purit Hongjirakul Portfolio Website
-
-## About
-
-- Website portfolio to showcase my projects
-- JavaScript
+Color Palettes
+#14213d
+#ffb703
