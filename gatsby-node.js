@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       postsRemark: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/content/posts/" }
-          frontmatter: { slug: { ne: "/pensieve/clickable-cards" } }
+          frontmatter: { slug: { ne: "/pensieve/clickable-cards", "/pensieve/dark-mode-toggle", "docker-compose-error", "markdown-playground", "wordpress-publish-error" } }
         }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
