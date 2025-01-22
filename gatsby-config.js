@@ -5,7 +5,7 @@ module.exports = {
     title: 'Purit Hongjirakul',
     description: 'Purit Hongjirakul website portfolio.',
     siteUrl: 'https://purithongjirakul.me', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/ph.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
   plugins: [
