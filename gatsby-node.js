@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       postsRemark: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/content/posts/" }
-          frontmatter: { slug: { ne: "/pensieve/" } }
+          frontmatter: { slug: { ne: "/pensieve/clickable-cards" } }
         }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
