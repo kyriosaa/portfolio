@@ -22,9 +22,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               nin: [
                 "/pensieve/clickable-cards"
                 "/pensieve/dark-mode-toggle"
-                "docker-compose-error"
-                "markdown-playground"
-                "wordpress-publish-error"
+                "/pensieve/docker-error"
+                "/pensieve/markdown-playground"
+                "/pensieve/wordpress-publish-error"
               ]
             }
           }
