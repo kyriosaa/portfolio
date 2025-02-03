@@ -124,7 +124,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Arduino', 'Raspberry Pi', 'C++', 'Python', 'JavaScript', 'React'];
+  const skills = ['Microcontrollers', 'Embedded Systems', 'C/C++', 'Python', 'JavaScript', 'React'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -134,21 +134,20 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Purit but you can call me Kin. I enjoy making robots and gadgets! I
-              started my robotics journey when I decided on a whim to buy an Arduino Uno board
-              because it "looked cool." From there, I learned many interesting things from simple
-              LED buttons to complex projects that make metal come to life!
+              Hello! My name is Purit but you can call me Kin. I enjoy making robots and learning
+              about embedded systems! I started my robotics journey when I decided on a whim to buy
+              an Arduino Uno board because it "looked cool." From there, I learned many interesting
+              things from simple LED buttons to complex projects.
             </p>
 
             <p>
-              Since then, I’ve been lucky enough to have the opportunity to work at{' '}
+              Since then, I've been lucky enough to have the opportunity to work at{' '}
               <a href="https://www.pegatroncorp.com/">Pegatron</a> and{' '}
               <a href="https://www.chaileaseholding.com/en">Chailease Holding</a>. Currently, I am
-              preparing to further my studies and obtain a masters degree in Electrical Engineering
-              and Computer Science.
+              preparing to further my studies and obtain a masters degree.
             </p>
 
-            <p>The technologies I am most familiar with include:</p>
+            <p>Concepts I am most familiar with include:</p>
           </div>
 
           <ul className="skills-list">

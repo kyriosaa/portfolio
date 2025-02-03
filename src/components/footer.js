@@ -48,6 +48,7 @@ const StyledCredit = styled.div`
 
   a {
     padding: 10px;
+    font-size: var(--fz-xxxs);
   }
 
   .github-stats {
