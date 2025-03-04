@@ -1,7 +1,7 @@
 ---
 date: '2024-06-01'
 title: 'SnackStore'
-github: 'https://github.com/kyriosaa/snack-store'
+external: 'https://github.com/kyriosaa/snack-store'
 tech:
   - TypeScript
   - C#

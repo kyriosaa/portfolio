@@ -1,8 +1,7 @@
 ---
 date: '2024-10-01'
 title: 'Wipeout'
-github: 'https://github.com/kyriosaa/wipeout/'
-external: 'https://kyriosaa.github.io/wipeout/'
+external: 'https://github.com/kyriosaa/wipeout/'
 tech:
   - JavaScript
   - Three.js
