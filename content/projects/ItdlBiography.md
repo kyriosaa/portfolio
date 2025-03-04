@@ -1,7 +1,8 @@
 ---
 date: '2024-05-01'
 title: 'AI-Enhanced Website Biography'
-external: 'https://github.com/kyriosaa/itdl-biography'
+github: 'https://github.com/kyriosaa/itdl-biography'
+external: 'https://itdl-biography.vercel.app/'
 tech:
   - JavaScript
   - React
