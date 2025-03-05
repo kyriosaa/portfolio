@@ -7,4 +7,4 @@ tech:
 showInProjects: true
 ---
 
-A news web scraper I made for my friends that can post updates relating to the Pokemon TCG.
+A news web scraper that can post news articles relating to the Pokemon TCG. Currently being used in a community with over 29,000+ members along with multiple smaller communities.
