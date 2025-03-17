@@ -1,6 +1,6 @@
 ---
 date: '1'
-title: 'Digital Twin - Glue Dispenser'
+title: 'Digital Twin - Fluid Dispenser'
 cover: './demo.jpg'
 external: 'https://developer.nvidia.com/blog/pegatron-simulates-and-optimizes-factory-operations-with-ai-enabled-digital-twins/'
 cta: 'https://developer.nvidia.com/blog/pegatron-simulates-and-optimizes-factory-operations-with-ai-enabled-digital-twins/'
