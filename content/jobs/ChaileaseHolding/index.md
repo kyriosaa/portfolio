@@ -3,7 +3,7 @@ date: '2024-06-01'
 title: 'Vehicle and Backstage Systems Engineer Intern'
 company: 'Chailease Holding'
 location: 'Taipei, Taiwan'
-range: 'Jun - Jul 2024'
+range: 'Apr 2024 - May 2024'
 url: 'https://www.chaileaseholding.com/en'
 ---
 

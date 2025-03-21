@@ -3,7 +3,7 @@ date: '2024-10-01'
 title: 'Digital Twin R&D Engineer Intern'
 company: 'Pegatron'
 location: 'Taipei, Taiwan'
-range: 'Jul - Oct 2024'
+range: 'May 2024 - Oct 2024'
 url: 'https://www.pegatroncorp.com/'
 ---
 
