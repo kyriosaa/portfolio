@@ -14,4 +14,4 @@ tech:
 
 BitTheater is a compact, tactile device that brings your custom animations to life, displaying up to 4 unique animations in a sleek, pocket-sized design.
 
-Wanting to practice turning my projects into a more permanent form, I spent time making a simple device that displays animations on a 16x2 LCD screen. I drafted up a circuit prototype on a breadboard along with an Arduino program with four different animations. Then, I started soldering the components to a perfboard to create the final build.
+I built BitTheater to practice making my projects more permanent. I first prototyped the circuit on a breadboard along with an Arduino program, then soldered the components onto a perfboard for the final build.
