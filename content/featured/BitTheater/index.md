@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2'
 title: 'BitTheater'
 cover: './demo.JPG'
 external: 'https://github.com/kyriosaa/bittheater'
@@ -7,7 +7,8 @@ cta: 'https://github.com/kyriosaa/bittheater'
 tech:
   - C++
   - Arduino
-  - Perfboard
+  - Embedded Systems
+  - Electrical Design
   - Soldering
 ---
 
