@@ -124,7 +124,8 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Microcontrollers (STM32, ESP32, Arduino)', 'Embedded Systems', 'C/C++', 'Python', 'JavaScript (ReactJS)'];
+  const skills = ['Embedded Systems', 'Circuit Design', 'STM32', 'ESP32', 'Arduino', 'C/C++'];
+  const skills2 = ['Machine Learning (AI)', 'Python'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -152,6 +153,10 @@ const About = () => {
 
           <ul className="skills-list">
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+          </ul>
+          <hr/>
+          <ul className="skills-list">
+            {skills2 && skills2.map((skill2, i) => <li key={i}>{skill2}</li>)}
           </ul>
         </StyledText>
 
