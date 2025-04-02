@@ -7,8 +7,7 @@ cta: 'https://github.com/kyriosaa/bittheater'
 tech:
   - C++
   - Arduino
-  - Embedded Systems
-  - Electrical Design
+  - Circuit Design
   - Soldering
 ---
 
