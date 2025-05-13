@@ -67,12 +67,12 @@ const Hero = () => {
         I'm an electrical engineering and computer science graduate that is very interested in
         robotics and embedded systems.
       </p>
-      <p>If you like my work or have any questions, please click the button below!</p>
+      <p>If you like my work or have any questions, please send me an email!</p>
     </>
   );
   const four = (
     <a className="email-link" href="mailto:kyriosaaph@gmail.com">
-      Email Me
+      Email Me!
     </a>
   );
 
