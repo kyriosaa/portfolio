@@ -1,7 +1,7 @@
 ---
 date: '3'
 title: 'BitTheater'
-cover: './demo.jpg'
+cover: './v1-1.jpg'
 external: 'https://github.com/kyriosaa/bittheater'
 cta: 'https://github.com/kyriosaa/bittheater'
 tech:
