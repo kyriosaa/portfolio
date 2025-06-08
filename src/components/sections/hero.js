@@ -64,8 +64,8 @@ const Hero = () => {
   const three = (
     <>
       <p>
-        I'm an electrical engineering and computer science graduate that is very interested in
-        robotics and embedded systems.
+        I'm an electrical engineering and computer science student that is very interested in 
+        embedded systems and AI.
       </p>
       <p>If you like my work or have any questions, please send me an email!</p>
     </>

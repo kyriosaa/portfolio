@@ -135,10 +135,10 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Purit but you can call me Kin. I enjoy making robots and learning
-              about embedded systems! I started my robotics journey when I decided on a whim to buy
-              an Arduino Uno board because it "looked cool." From there, I learned many interesting
-              things from simple LED buttons to complex projects.
+              Hello! My name is Purit and I am an electrical engineering and computer science student mainly focused on embedded systems and AI.
+              I started working on embedded systems when I bought an Arduino Uno board at the store because it "looked cool" and
+              started making simple LED projects. From there, I've moved onto more complex projects and I'm currently focusing on integrating
+              lightweight AI on microcontrollers.
             </p>
 
             <p>

@@ -11,4 +11,4 @@ tech:
   - Soldering
 ---
 
-Built for robotic vehicles, this Collision Prevention System helps smart vehicles navigate their surroundings and avoid potential obstacles. The device includes multiple sensors—such as ultrasonic, infrared, and photoresistors—as well as various output devices, including an LCD display, LED lights, and a buzzer, all packaged into one convenient unit.
+Built for robotic vehicles, this Collision Prevention System helps smart vehicles navigate their surroundings and avoid potential obstacles. The device includes multiple sensors such as ultrasonic, infrared, and photoresistors. Various output devices are also included, such as an LCD display, LED lights, and a buzzer, all packaged into one convenient unit.
