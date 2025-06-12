@@ -7,4 +7,4 @@ tech:
 showInProjects: true
 ---
 
-A custom Discord bot built with Python using discord.py. Features include automated moderation, user interaction commands, automatic regex checking, and integration with external APIs. Designed to be modular, scalable, and easy to extend for custom server needs.
+A custom Discord bot built with Python using discord.py. Features include automated moderation, user interaction commands, automatic regex checking, and integration with external APIs. Includes a database so it can be used in multiple servers.

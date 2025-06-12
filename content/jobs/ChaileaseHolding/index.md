@@ -7,5 +7,5 @@ range: 'Apr 2024 - May 2024'
 url: 'https://www.chaileaseholding.com/en'
 ---
 
-- Used the .NET framework to design backend vehicle systems
-- Conducted end-to-end troubleshooting and debugging, resolving the majority of back-end issues to maintain smooth application performance and minimize downtime
+- Used the .NET framework to design backend vehicle systems.
+- Helped project engineers with troubleshooting and debugging to make sure that the system works seamlessly.

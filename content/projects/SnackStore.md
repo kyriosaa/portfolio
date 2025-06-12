@@ -10,4 +10,4 @@ tech:
 showInProjects: true
 ---
 
-A modern e-commerce store mockup made using TypeScript, C#, .NET, and React. This website sells Taiwanese snacks and comes equipped with features such as a database, membership login, website cookies, store item management, and Stripe payments.
+A modern e-commerce store mockup made using TypeScript, C#, .NET, and React. This website sells Taiwanese snacks and has features such as a database, membership login, website cookies, store item management, and Stripe payments.

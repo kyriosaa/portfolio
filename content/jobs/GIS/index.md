@@ -8,4 +8,4 @@ url: 'https://gisthailand.org/'
 ---
 
 - Taught AP Computer Science A & P curriculum at Grace International School, focusing on Java & JavaScript programming, algorithms, data structures, and object-oriented design.
-- Designed and delivered lectures, coding exercises, and assessments aligned with College Board standards.
+- Helped students through lectures and coding exercises that are aligned with College Board standards.
