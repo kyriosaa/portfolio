@@ -138,6 +138,12 @@ const StyledProject = styled.li`
     }
   }
 
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
   .project-content {
     display: flex;
     flex-direction: column;
@@ -238,43 +244,45 @@ const Projects = () => {
 
     return (
       <div className="project-inner">
-        <header>
-          <div className="project-top">
-            <div className="folder">
-              <Icon name="Folder" />
+        <div className="project-body">
+          <header>
+            <div className="project-top">
+              <div className="folder">
+                <Icon name="Folder" />
+              </div>
+              <div className="project-links">
+                {github && (
+                  <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                    <Icon name="GitHub" />
+                  </a>
+                )}
+                {external && (
+                  <a
+                    href={external}
+                    aria-label="External Link"
+                    className="external"
+                    target="_blank"
+                    rel="noreferrer">
+                    <Icon name="External" />
+                  </a>
+                )}
+              </div>
             </div>
-            <div className="project-links">
-              {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
-                </a>
-              )}
-              {external && (
-                <a
-                  href={external}
-                  aria-label="External Link"
-                  className="external"
-                  target="_blank"
-                  rel="noreferrer">
-                  <Icon name="External" />
-                </a>
-              )}
-            </div>
+
+            <h3 className="project-title">
+              <a href={external} target="_blank" rel="noreferrer">
+                {title}
+              </a>
+            </h3>
+
+          </header>
+
+          <div className='project-content'>
+            <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+            {image && <img src={image} alt={title} className="project-image" />}
           </div>
-
-          <h3 className="project-title">
-            <a href={external} target="_blank" rel="noreferrer">
-              {title}
-            </a>
-          </h3>
-
-        </header>
-
-        <div className='project-content'>
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-          {image && <img src={image} alt={title} className="project-image" />}
         </div>
-        
+
         <footer>
           {tech && (
             <ul className="project-tech-list">
