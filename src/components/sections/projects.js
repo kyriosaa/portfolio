@@ -182,6 +182,7 @@ const Projects = () => {
               tech
               github
               external
+              image
             }
             html
           }
@@ -213,7 +214,7 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, title, tech, image } = frontmatter;
 
     return (
       <div className="project-inner">
@@ -248,6 +249,8 @@ const Projects = () => {
           </h3>
 
           <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+          
+          {image && <img src={image} alt={title} className="project-image" />}
         </header>
 
         <footer>
