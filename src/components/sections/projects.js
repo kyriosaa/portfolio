@@ -268,12 +268,13 @@ const Projects = () => {
             </a>
           </h3>
 
-          <div className='project-content'>
-            <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-            {image && <img src={image} alt={title} className="project-image" />}
-          </div>
         </header>
 
+        <div className='project-content'>
+          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+          {image && <img src={image} alt={title} className="project-image" />}
+        </div>
+        
         <footer>
           {tech && (
             <ul className="project-tech-list">
