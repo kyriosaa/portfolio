@@ -8,4 +8,4 @@ showInProjects: true
 image: '/images/dittobot.png'
 ---
 
-A custom Discord bot built with Python using discord.py. Features include automated moderation, user interaction commands, automatic regex checking, and integration with external APIs. Includes a database so it can be used in multiple servers.
+A custom Discord bot built with Python using discord.py. Features include automated moderation, user interaction commands, automatic regex checking, and integration with external APIs. Currently being used in a community of over 32,000 members and actively maintained.
