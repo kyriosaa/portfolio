@@ -227,7 +227,7 @@ const Projects = () => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
-  const GRID_LIMIT = 6;
+  const GRID_LIMIT = 9;
   const projects = data.projects.edges.filter(({ node }) => node);
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
@@ -267,12 +267,12 @@ const Projects = () => {
               {title}
             </a>
           </h3>
-        </header>
 
-        <div className='project-content'>
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-          {image && <img src={image} alt={title} className="project-image" />}
-        </div>
+          <div className='project-content'>
+            <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+            {image && <img src={image} alt={title} className="project-image" />}
+          </div>
+        </header>
 
         <footer>
           {tech && (
