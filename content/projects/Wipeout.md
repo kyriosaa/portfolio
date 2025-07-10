@@ -6,6 +6,7 @@ tech:
   - JavaScript
   - Three.js
 showInProjects: true
+image: '../../static/project-img/ditto_banner.png'
 ---
 
 A simple obstacle course game on the web. I made this while learning how to use Three.js to make websites.

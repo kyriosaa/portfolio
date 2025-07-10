@@ -8,6 +8,7 @@ tech:
   - .NET
   - React
 showInProjects: true
+image: '../../static/project-img/ditto_banner.png'
 ---
 
 A modern e-commerce store mockup made using TypeScript, C#, .NET, and React. This website sells Taiwanese snacks and has features such as a database, membership login, website cookies, store item management, and Stripe payments.
