@@ -6,7 +6,7 @@ tech:
   - Raspberry Pi
   - Linux
 showInProjects: true
-image: './images/ditto_banner.png'
+image: '/images/ditto_banner.png'
 ---
 
 A portable Raspberry Pi retro gaming console. Able to emulate games ranging from the Atari 2600 all the way to the original Playstation.
