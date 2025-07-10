@@ -135,6 +135,13 @@ const StyledProject = styled.li`
     }
   }
 
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
   .project-description {
     color: var(--light-slate);
     font-size: 17px;
@@ -142,6 +149,14 @@ const StyledProject = styled.li`
     a {
       ${({ theme }) => theme.mixins.inlineLink};
     }
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
   }
 
   .project-tech-list {
@@ -247,11 +262,12 @@ const Projects = () => {
               {title}
             </a>
           </h3>
-
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-          
-          {image && <img src={image} alt={title} className="project-image" />}
         </header>
+
+        <div className='project-content'>
+          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+          {image && <img src={image} alt={title} className="project-image" />}
+        </div>
 
         <footer>
           {tech && (
