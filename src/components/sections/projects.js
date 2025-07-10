@@ -54,6 +54,9 @@ const StyledProject = styled.li`
       .project-inner {
         transform: translateY(-7px);
       }
+      .project-image {
+        filter: grayscale(0%) contrast(1) brightness(100%);
+      }
     }
   }
 
@@ -157,6 +160,8 @@ const StyledProject = styled.li`
     margin-top: 15px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    filter: grayscale(100%) contrast(1) brightness(90%);
+    transition: var(--transition);
   }
 
   .project-tech-list {

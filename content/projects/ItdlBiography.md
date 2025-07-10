@@ -8,7 +8,7 @@ tech:
   - React
 company: National Taipei University of Technology
 showInProjects: true
-image: '/images/ditto_banner.png'
+image: '/images/itdlbiography.png'
 ---
 
 A website that gives the biography of Taiwanese scientist Lyn Shun-Lien Shung by incorporating different AI elements such as a chatbot and image generation.
