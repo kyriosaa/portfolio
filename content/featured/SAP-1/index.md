@@ -6,7 +6,6 @@ external: 'https://github.com/kyriosaa/sap-1'
 cta: 'https://github.com/kyriosaa/sap-1'
 tech:
   - Computer Architecture
-  - Circuit Design
   - Binary Systems
   - Assembly
   - C++

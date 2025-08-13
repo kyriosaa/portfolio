@@ -5,7 +5,6 @@ external: 'https://github.com/kyriosaa/bittheater'
 tech:
   - C++
   - Arduino
-  - Circuit Design
   - PCB Design
 showInProjects: true
 image: '/images/bittheater.jpg'
