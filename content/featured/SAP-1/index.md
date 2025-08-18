@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'SAP-1'
-cover: './demo.JPG'
+cover: './demo.jpg'
 external: 'https://github.com/kyriosaa/sap-1'
 cta: 'https://github.com/kyriosaa/sap-1'
 tech:
