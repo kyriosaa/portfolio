@@ -7,7 +7,6 @@ cta: 'https://github.com/kyriosaa/sap-1'
 tech:
   - Computer Architecture
   - Assembly
-  - C++
   - Binary Systems
 ---
 
