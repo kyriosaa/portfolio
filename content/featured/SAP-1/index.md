@@ -6,8 +6,8 @@ external: 'https://github.com/kyriosaa/sap-1'
 cta: 'https://github.com/kyriosaa/sap-1'
 tech:
   - Computer Architecture
+  - Digital Logic
   - Assembly
-  - Binary Systems
 ---
 
 An 8-bit computer from scratch using logic gates and electronic components. Includes an instruction set with manual programming functions and core components such as a clock, ALU, registers, program counter, etc.
