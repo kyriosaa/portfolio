@@ -20,11 +20,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build with path prefix
+      - name: Clean previous build
+        run: npm run clean
+      
+      - name: Build site
         run: npm run build
+      
+      - name: Verify build output
+        run: |
+          echo "=== Contents of public directory ==="
+          ls -la public/
+          echo "=== First few lines of index.html ==="
+          head -10 public/index.html
+          echo "=== Total files built ==="
+          find public -type f | wc -l
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          keep_files: false
+          force_orphan: true
