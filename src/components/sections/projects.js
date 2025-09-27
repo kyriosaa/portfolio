@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useStaticQuery, graphql, withPrefix } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { srConfig } from '@config';
@@ -279,7 +279,7 @@ const Projects = () => {
 
           <div className='project-content'>
             <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-            {image && <img src={withPrefix(image)} alt={title} className="project-image" />}
+            {image && <img src={image} alt={title} className="project-image" />}
           </div>
         </div>
 
