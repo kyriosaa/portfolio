@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build
+      - name: Build with path prefix
         run: npm run build
       
       - name: Deploy to GitHub Pages
