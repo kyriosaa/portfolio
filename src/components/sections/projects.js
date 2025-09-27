@@ -279,7 +279,7 @@ const Projects = () => {
 
           <div className='project-content'>
             <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-            {image && <img src={withPrefix(project.frontmatter.image)} alt={project.frontmatter.title} className="project-image" />}
+            {image && <img src={withPrefix(image)} alt={title} className="project-image" />}
           </div>
         </div>
 
