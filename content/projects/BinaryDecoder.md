@@ -6,7 +6,7 @@ tech:
   - Electrical Wiring
   - Circuit Design
 showInProjects: true
-image: '/images/binarydecoder.jpg'
+image: 'images/binarydecoder.jpg'
 ---
 
 A device that translates binary inputs into decimal outputs. A binary input is converted to a decimal output using the 7447 BCD decoder.
