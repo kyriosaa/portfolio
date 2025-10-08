@@ -135,17 +135,16 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Purit and I am an electrical engineering and computer science student mainly focused on embedded systems and AI.
+              Hello! My name is Purit and I am an electrical engineering and computer science student mainly focused on embedded systems and IoT.
               I started working on embedded systems when I bought an Arduino Uno board at the store because it "looked cool" and
-              started making simple LED projects. From there, I've moved onto more complex projects and I'm currently focusing on integrating
-              lightweight AI on microcontrollers.
+              started making simple LED projects. From there, I've moved onto more complex projects and designing my own PCBs.
             </p>
 
             <p>
               Since then, I've been lucky enough to have the opportunity to work at{' '}
               <a href="https://www.pegatroncorp.com/">Pegatron</a> and{' '}
-              <a href="https://www.chaileaseholding.com/en">Chailease Holding</a>. Currently, I am
-              preparing to further my studies and obtain a masters degree.
+              <a href="https://www.houjuenergy.com/en/home">Hou Ju Energy</a>. Currently, I am
+              enrolled in an Electrical Engineering and Computer Science Masters degree.
             </p>
 
             <p>Concepts I am most familiar with include:</p>
