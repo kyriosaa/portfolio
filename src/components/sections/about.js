@@ -124,7 +124,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills1 = ['C/C++/Python', 'STM32/ESP32/Arduino', 'Embedded Systems', 'Digital Logic', 'Computer Architecture', 'Machine Learning'];
+  const skills1 = ['C/C++/Python', 'STM32/ESP32/Arduino', 'Embedded Systems', 'Internet of Things', 'Digital Twins', 'Machine Learning'];
   // const skills2 = ['Machine Learning (AI)', 'Python'];
 
   return (
