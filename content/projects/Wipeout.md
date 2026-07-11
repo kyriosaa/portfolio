@@ -5,7 +5,7 @@ external: 'https://kyriosaa.github.io/wipeout/'
 tech:
   - JavaScript
   - Three.js
-showInProjects: true
+showInProjects: false
 image: '/images/wipeout.png'
 ---
 

@@ -7,7 +7,7 @@ tech:
   - JavaScript
   - React
 company: National Taipei University of Technology
-showInProjects: true
+showInProjects: false
 image: '/images/itdlbiography.png'
 ---
 
