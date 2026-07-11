@@ -3,9 +3,8 @@ date: '2024-11-01'
 title: '7 Segment Display Binary Decoder'
 github: 'https://github.com/kyriosaa/7binary'
 tech:
-  - Electrical Wiring
-  - Circuit Design
-showInProjects: true
+  - Electronics
+showInProjects: false
 image: '/images/binary_decoder.jpg'
 ---
 

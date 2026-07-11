@@ -5,7 +5,6 @@ github: 'https://github.com/kyriosaa/pong-wars'
 tech:
   - C++
   - ESP32
-  - Circuit Design
 showInProjects: true
 image: '/images/pongwars.jpeg'
 ---

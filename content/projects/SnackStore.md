@@ -7,7 +7,7 @@ tech:
   - C#
   - .NET
   - React
-showInProjects: false
+showInProjects: true
 image: '/images/snackstore.jpg'
 ---
 

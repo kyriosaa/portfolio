@@ -5,7 +5,7 @@ github: 'https://github.com/kyriosaa/bittheater'
 tech:
   - C++
   - Arduino
-  - PCB Design
+  - KiCad
 showInProjects: true
 image: '/images/bittheater.jpg'
 ---

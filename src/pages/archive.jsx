@@ -198,14 +198,14 @@ const ArchivePage = () => {
 
                       <td className="links">
                         <div>
-                          {external && (
-                            <a href={external} aria-label="External Link">
-                              <Icon name="External" />
-                            </a>
-                          )}
                           {github && (
                             <a href={github} aria-label="GitHub Link">
                               <Icon name="GitHub" />
+                            </a>
+                          )}
+                          {external && (
+                            <a href={external} aria-label="External Link">
+                              <Icon name="External" />
                             </a>
                           )}
                           {/* {ios && (

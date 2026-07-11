@@ -5,7 +5,7 @@ external: 'https://www.youtube.com/watch?v=S4q6FUawJAY&ab_channel=PuritHongjirak
 tech:
   - Raspberry Pi
   - Linux
-showInProjects: true
+showInProjects: false
 image: '/images/rpi_game_console.jpg'
 ---
 

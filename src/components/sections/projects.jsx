@@ -299,6 +299,10 @@ const Projects = () => {
         )}
       </ul>
 
+      <a className="more-button" href={withPrefix('/archive/')}>
+        View All Projects
+      </a>
+
       {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
       </button> */}

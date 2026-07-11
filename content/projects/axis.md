@@ -5,9 +5,7 @@ github: 'https://github.com/kyriosaa/axis'
 tech:
   - C++
   - ESP32
-  - Embedded Systems
-  - Mechatronics
-showInProjects: false
+showInProjects: true
 image: '/images/axis.JPG'
 ---
 
