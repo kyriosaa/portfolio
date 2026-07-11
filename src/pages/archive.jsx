@@ -157,7 +157,7 @@ const ArchivePage = () => {
               <tr>
                 <th>Year</th>
                 <th>Title</th>
-                <th className="hide-on-mobile">Made at</th>
+                <th className="hide-on-mobile">Made for</th>
                 <th className="hide-on-mobile">Using</th>
                 <th>Link</th>
               </tr>
@@ -182,7 +182,7 @@ const ArchivePage = () => {
                       <td className="title">{title}</td>
 
                       <td className="company hide-on-mobile">
-                        {company ? <span>{company}</span> : <span>—</span>}
+                        {company ? <span>{company}</span> : <span>Personal</span>}
                       </td>
 
                       <td className="tech hide-on-mobile">

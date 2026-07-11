@@ -1,7 +1,7 @@
 ---
 date: '2025-07-10'
 title: 'Pong Wars'
-external: 'https://github.com/kyriosaa/pong-wars'
+github: 'https://github.com/kyriosaa/pong-wars'
 tech:
   - C++
   - ESP32

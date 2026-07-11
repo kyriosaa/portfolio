@@ -1,7 +1,7 @@
 ---
 date: '2025-05-06'
 title: 'Ditto Bot'
-external: 'https://github.com/kyriosaa/ditto-bot'
+github: 'https://github.com/kyriosaa/ditto-bot'
 tech:
   - Python
 showInProjects: true

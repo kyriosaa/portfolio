@@ -1,7 +1,7 @@
 ---
 date: '2025-04-10'
 title: 'Collision Prevention System'
-external: 'https://github.com/kyriosaa/cps'
+github: 'https://github.com/kyriosaa/cps'
 tech:
   - C/C++
   - Arduino

@@ -1,7 +1,7 @@
 ---
 date: '2025-05-31'
 title: 'BitTheater'
-external: 'https://github.com/kyriosaa/bittheater'
+github: 'https://github.com/kyriosaa/bittheater'
 tech:
   - C++
   - Arduino
