@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
+import mePic from '@images/me.jpg';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
@@ -79,6 +79,9 @@ const StyledPic = styled.div`
     }
 
     .img {
+      display: block;
+      width: 100%;
+      height: auto;
       position: relative;
       border-radius: var(--border-radius);
       mix-blend-mode: normal;
@@ -124,7 +127,14 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills1 = ['C/C++/Python', 'STM32/ESP32/Arduino', 'Embedded Systems', 'Internet of Things', 'Digital Twins', 'Machine Learning'];
+  const skills1 = [
+    'C/C++/Python',
+    'STM32/ESP32/Arduino',
+    'Embedded Systems',
+    'Internet of Things',
+    'Digital Twins',
+    'Machine Learning',
+  ];
   // const skills2 = ['Machine Learning (AI)', 'Python'];
 
   return (
@@ -135,9 +145,11 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Purit and I am an electrical engineering and computer science student mainly focused on embedded systems and IoT.
-              I started working on embedded systems when I bought an Arduino Uno board at the store because it "looked cool" and
-              started making simple LED projects. From there, I've moved onto more complex projects and designing my own PCBs.
+              Hello! My name is Purit and I am an electrical engineering and computer science
+              student mainly focused on embedded systems and IoT. I started working on embedded
+              systems when I bought an Arduino Uno board at the store because it "looked cool" and
+              started making simple LED projects. From there, I've moved onto more complex projects
+              and designing my own PCBs.
             </p>
 
             <p>
@@ -161,14 +173,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <StaticImage
-              className="img"
-              src="../../images/me.jpg"
-              width={500}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
+            <img className="img" src={mePic} width="500" alt="Headshot" />
           </div>
         </StyledPic>
       </div>

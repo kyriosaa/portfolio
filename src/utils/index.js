@@ -1,7 +1,6 @@
-export const hex2rgba = (hex, alpha = 1) => {
-  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
-  return `rgba(${r},${g},${b},${alpha})`;
-};
+// Prefixes root-relative URLs with the site's base path (e.g. '/portfolio/'),
+// replacing Gatsby's withPrefix/pathPrefix handling.
+export const withPrefix = (url = '/') => import.meta.env.BASE_URL + url.replace(/^\//, '');
 
 export const navDelay = 1000;
 export const loaderDelay = 2000;

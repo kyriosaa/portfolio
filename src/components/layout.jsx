@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import { Head, Loader, Nav, Email, Footer } from '@components';
+import { Loader, Nav, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
 
 const StyledContent = styled.div`
@@ -10,8 +10,7 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({ children, location }) => {
-  const isHome = location.pathname === '/';
+const Layout = ({ children, isHome = false }) => {
   const [isLoading, setIsLoading] = useState(isHome);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
@@ -32,8 +31,8 @@ const Layout = ({ children, location }) => {
       return;
     }
 
-    if (location.hash) {
-      const id = location.hash.substring(1); // location.hash without the '#'
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1); // location.hash without the '#'
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
@@ -47,40 +46,35 @@ const Layout = ({ children, location }) => {
   }, [isLoading]);
 
   return (
-    <>
-      <Head />
+    <div id="root">
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
 
-      <div id="root">
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
+        <a className="skip-to-content" href="#content">
+          Skip to Content
+        </a>
 
-          <a className="skip-to-content" href="#content">
-            Skip to Content
-          </a>
+        {isLoading && isHome ? (
+          <Loader finishLoading={() => setIsLoading(false)} />
+        ) : (
+          <StyledContent>
+            <Nav isHome={isHome} />
+            <Email isHome={isHome} />
 
-          {isLoading && isHome ? (
-            <Loader finishLoading={() => setIsLoading(false)} />
-          ) : (
-            <StyledContent>
-              <Nav isHome={isHome} />
-              {/* <Social isHome={isHome} /> */}
-              <Email isHome={isHome} />
-
-              <div id="content">
-                {children}
-                <Footer />
-              </div>
-            </StyledContent>
-          )}
-        </ThemeProvider>
-      </div>
-    </>
+            <div id="content">
+              {children}
+              <Footer />
+            </div>
+          </StyledContent>
+        )}
+      </ThemeProvider>
+    </div>
   );
 };
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired,
+  isHome: PropTypes.bool,
 };
 
 export default Layout;

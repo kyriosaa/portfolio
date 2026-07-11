@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import styled from 'styled-components';
@@ -95,10 +94,14 @@ const Loader = ({ finishLoading }) => {
     return () => clearTimeout(timeout);
   }, []);
 
+  // Hide page overflow while the loader is showing (was done via react-helmet)
+  useEffect(() => {
+    document.body.classList.add('hidden');
+    return () => document.body.classList.remove('hidden');
+  }, []);
+
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
-      <Helmet bodyAttributes={{ class: `hidden` }} />
-
       <div className="logo-wrapper">
         <div className="text-div">
           <h1 className="name-text">Purit</h1> <h1 className="name-text">Hongjirakul</h1>

@@ -1,4 +1,4 @@
-name: Deploy Gatsby to GitHub Pages
+name: Deploy Vite site to GitHub Pages
 
 on:
   push:
@@ -10,35 +10,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           cache: npm
-      
+
       - name: Install dependencies
         run: npm ci
-      
-      - name: Clean previous build
-        run: npm run clean
-      
+
       - name: Build site
         run: npm run build
-      
+
       - name: Verify build output
         run: |
-          echo "=== Contents of public directory ==="
-          ls -la public/
+          echo "=== Contents of dist directory ==="
+          ls -la dist/
           echo "=== First few lines of index.html ==="
-          head -10 public/index.html
+          head -10 dist/index.html
           echo "=== Total files built ==="
-          find public -type f | wc -l
-      
+          find dist -type f | wc -l
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./dist
           keep_files: false
           force_orphan: true
