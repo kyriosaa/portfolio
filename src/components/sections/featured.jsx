@@ -154,6 +154,7 @@ const StyledProject = styled.li`
     ${({ theme }) => theme.mixins.boxShadow};
     position: relative;
     z-index: 2;
+    text-align: left;
     padding: 25px;
     border-radius: var(--border-radius);
     background-color: var(--light-navy);
