@@ -48,7 +48,7 @@ const StyledCredit = styled.div`
 
   a {
     padding: 10px;
-    font-size: var(--fz-xxxs);
+    font-size: 10px;
   }
 
   .github-stats {
@@ -87,7 +87,7 @@ function Footer() {
       <StyledCredit tabindex="-1">
         <p>© 2025 Purit Hongjirakul</p>
         <a href="https://brittanychiang.com/">
-          <div>Template by Brittany Chiang</div>
+          <div>Thank you Brittany Chiang for the template!</div>
         </a>
       </StyledCredit>
     </StyledFooter>

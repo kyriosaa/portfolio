@@ -21,7 +21,7 @@ const StyledAboutSection = styled.section`
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(2, minmax(0, 200px));
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
@@ -30,10 +30,12 @@ const StyledText = styled.div`
 
     li {
       position: relative;
+      min-width: 0;
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
+      overflow-wrap: break-word;
 
       &:before {
         content: '▹';
@@ -129,11 +131,11 @@ const About = () => {
 
   const skills1 = [
     'C/C++/Python',
-    'STM32/ESP32/Arduino',
     'Embedded Systems',
-    'Internet of Things',
+    'ESP32/Arduino/\nRaspberry Pi',
+    'PCB Design (Altium/KiCad)',
+    'IoT & Cloud Security',
     'Digital Twins',
-    'Machine Learning',
   ];
   // const skills2 = ['Machine Learning (AI)', 'Python'];
 
