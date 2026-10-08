@@ -7,7 +7,7 @@ export const socialMedia = [
   },
   {
     name: 'Linkedin',
-    url: 'https://www.linkedin.com/in/kyriosaa/',
+    url: 'https://www.linkedin.com/in/purithongjirakul/',
   },
 ];
 

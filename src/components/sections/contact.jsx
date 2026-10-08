@@ -62,7 +62,7 @@ const Contact = () => {
         Location: Taipei City, Taiwan <br /> Email: kyriosaaph@gmail.com
       </p>
 
-      <a className="socials-link" href={`https://www.linkedin.com/in/kyriosaa/`}>
+      <a className="socials-link" href={`https://www.linkedin.com/in/purithongjirakul/`}>
         Linkedin
       </a>
       <a className="socials-link" href={`https://github.com/kyriosaa`}>
