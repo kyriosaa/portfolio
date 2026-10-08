@@ -295,6 +295,7 @@ const StyledProject = styled.li`
       border-radius: var(--border-radius);
       mix-blend-mode: normal;
       filter: grayscale(100%) contrast(1);
+      transition: var(--transition);
 
       @media (max-width: 768px) {
         object-fit: cover;
